@@ -5,3 +5,4 @@
 .idea
 tasks_and_attachments
 *.code-workspace
+*.json
