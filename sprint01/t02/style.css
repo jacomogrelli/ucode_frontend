@@ -1,0 +1,27 @@
+.header {
+    text-align: center;
+    color: white;
+    font-weight: bolt;
+}
+
+.head-cell {
+    background-color: black;
+}
+
+.cell-text {
+    text-align: center;
+}
+.cell-border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+.table-border {
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+.red {
+
+}
