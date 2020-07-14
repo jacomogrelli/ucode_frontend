@@ -23,6 +23,8 @@
   width: 120px;
   border-radius: 15%;
   margin: 10px;
+  /* прозрачная рамка в 1px */
+  border: 1px solid rgba(0, 0, 0, .4);
 }
 
 .darkgoldenrod {
