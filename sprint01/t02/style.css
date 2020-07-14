@@ -1,27 +1,54 @@
 .header {
-    text-align: center;
-    color: white;
-    font-weight: bolt;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: black;
 }
 
-.head-cell {
-    background-color: black;
-}
-
-.cell-text {
-    text-align: center;
-}
-.cell-border {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+.cell {
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #dad5cd;
+  padding: 10px;
 }
 
 .table-border {
-    border-collapse: collapse;
-    border: 2px solid white;
+  border-collapse: collapse;
+  border: 2px solid #dad5cd;
+}
+
+.image {
+  height: 120px;
+  width: 120px;
+  border-radius: 15%;
+  margin: 10px;
+}
+
+.darkgoldenrod {
+  background-color: #c49659;
+}
+
+.green {
+  background-color: #497b30;
+}
+
+.blue {
+  background-color: #30568a;
+}
+
+.yellow {
+  background-color: #fffd73;
 }
 
 .red {
+  background-color: #a5413a;
+}
 
+.viollet {
+  background-color: #7e77ae;
+}
+
+.link-style {
+  text-align: center;
 }
