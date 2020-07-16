@@ -11,11 +11,11 @@
   height: 2em;
   /* border: 3px solid rgba(52,	96,	190); */
   border-radius: 3px;
-  border-color: rgba(52,	96,	190);
+  border-color: rgba(52, 96, 190);
 }
 
 .form:hover {
-    color: red;
+  color: red;
 }
 
 .button {
@@ -26,5 +26,5 @@
 }
 
 .button:hover {
-    color:red;
+  color: red;
 }

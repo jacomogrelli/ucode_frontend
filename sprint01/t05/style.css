@@ -1,42 +1,67 @@
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin: 47px;
+}
+
+.flex-card {
+  width: 270px;
+  height: 187px;
+}
 .card {
-    width: 270px;
-    height: 140px;
-    border-radius: 5px;
-    font-family: Verdana;
+  width: 270px;
+  height: 140px;
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
 }
 
 .image {
-    height: 182px;
-    position: absolute; top: 0;
+  height: 182px;
+  width: auto;
+  transform: scale(0.87);
+  position: absolute;
+  bottom: -12px;
 }
 
 .image-spiderman {
-    height: 182px;
-    position: absolute; bottom: 0;
+  height: 182px;
+  width: auto;
+  transform: scale(0.87);
+  position: absolute;
+  top: -12px;
 }
 
 .text-alias {
-    color: white;
-    font-size: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 1rem;
 }
 
 .text-real-name {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 9px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 9px;
+  text-align: right;
+  padding-right: 1rem;
 }
 
-.card-captein-america {
-    background: linear-gradient(#4568DC, #B06AB3)
+.card-captain-america {
+  background: linear-gradient(#4568dc, #b06ab3);
 }
 
 .card-iron-man {
-    background: linear-gradient(#e52d27, #b31217)
+  background: linear-gradient(#e52d27, #b31217);
 }
 
 .card-black-widow {
-    background: linear-gradient(left to right, #000 to #61045F);
+  background: linear-gradient(90deg, #000, #61045f);
 }
 
 .card-spider-man {
-    background: linear-gradient(#e52d27 to #000)
+  background: linear-gradient(#e52d27, #000);
 }
