@@ -1,4 +1,4 @@
-img {
+.img-box {
   height: 300px;
   float: left;
   margin-right: 1em;
@@ -6,7 +6,10 @@ img {
 }
 
 @media print {
-  img {
+  .img-box {
     height: 300px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    float: none;
   }
 }

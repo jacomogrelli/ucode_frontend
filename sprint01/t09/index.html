@@ -11,8 +11,8 @@
 <body>
   <h1>Superhero Form</h1>
   <form action="/some_place">
-    <div class="block">
-      <span>About the Superhero</span><br>
+    <fieldset class="block">
+      <legend>About the Superhero</legend><br>
       <label>Real Name
         <input type="text" name="superhero-real-name" id="real-name" placeholder="Superhero real name" autofocus>
       </label>
@@ -29,9 +29,9 @@
       <label>Photo
         <input type="file" name="photo" id="photo">
       </label>
-    </div>
-    <div class="block">
-      <span>Powers</span><br>
+    </fieldset>
+    <fieldset class="block">
+      <legend>Powers</legend><br>
       <label>
         <input type="checkbox" name="Telekinesis" value="telekinesis">
         Telekinesis
@@ -58,9 +58,9 @@
       </label><br>
       <label for="contrl-lvl">Level of control</label>
       <input type="range" name="contrl-lvl" id="contrl-lvl" min="0" max="10" step="1" value="1">
-    </div>
-    <div class=block>
-      <span>Origin of Powers</span><br>
+    </fieldset>
+    <fieldset class=block>
+      <legend>Origin of Powers</legend><br>
       <label>
         <input type="radio" name="unknown" value="unknown">
         Unknown
@@ -81,7 +81,7 @@
         <input type="radio" name="other" value="other">
         Other
       </label>
-    </div>
+    </fieldset>
     <div class="buttons">
       <input type="reset" value="CLEAR">
       <input type="submit" value="SEND">
