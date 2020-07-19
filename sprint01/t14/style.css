@@ -1,31 +1,61 @@
 .match {
-    height: 40em;
-    width: 30em;
-    border: 2px solid black;
-    z-index: 0;
+  height: 700px;
+  width: 500px;
+  border: 2px solid black;
+  z-index: 0;
+  position: relative;
 }
 
 .stick {
-    position: relative;
-    border: 1px solid #B67254;
-    height: 20em;
-    width: 1em;
-    margin: 16em auto auto auto;
-    background: linear-gradient(90deg, #7D4A2B, #DAA572);
-    z-index: 1;
+  position: relative;
+  top: 10px;
+  border: 1px solid #b67254;
+  height: 350px;
+  width: 15px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #7d4a2b, #daa572);
+  z-index: 1;
 }
 
 .top {
-    background-color: #432918;
-    position: relative;
-    height: 2em;
-    width: 1.8em;
-    border-radius: 50%;
-    margin: 15em 14.1em auto 14.1em;
-    z-index: 2;
-    box-shadow: 49 50 10em 28 red;
+  background-color: #432918;
+  position: relative;
+  top: 33px;
+  height: 40px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.top::before {
+  top: -20%;
+  left: -12px;
+  box-shadow: 0 -5px 10px white;
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  opacity: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+  content: "";
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(0, 0, 0, 0) 57%
+  );
 }
 
 .fire {
-
+    position: relative;
+    top: 70px;
+    background: linear-gradient(135deg, #D84633, #EAB556);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    z-index: 0;
+    border-radius: 0 50% 50% 50%;
+    box-shadow: 0 0 15px #D84633;
+    transform: rotate(45deg);
 }
