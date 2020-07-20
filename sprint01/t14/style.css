@@ -18,7 +18,14 @@
 }
 
 .top {
-  background-color: #432918;
+  background: linear-gradient(
+    180deg,
+    white 5%,
+    rgba(182, 138, 99, 1) 33%,
+    rgba(108, 59, 28, 1) 60%,
+    rgba(71, 39, 19, 1) 100%
+  );
+  box-shadow: 0 -15px 15px 2px white;
   position: relative;
   top: 33px;
   height: 40px;
@@ -28,7 +35,7 @@
   z-index: 2;
 }
 
-.top::before {
+/* .top::before {
   box-shadow: 0 -10px 10px white;
   position: absolute;
   width: 30px;
@@ -37,7 +44,7 @@
   border-radius: 50%;
   content: "";
   z-index: 3;
-}
+} */
 
 .fire {
   position: relative;
