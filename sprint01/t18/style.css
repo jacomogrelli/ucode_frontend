@@ -8,12 +8,12 @@ form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 100vm;
+  width: 100%;
 }
 
 .type {
   color: #52813a;
-  flex-grow: 1;
+  flex-grow: 3;
   border-radius: 3px;
   border-color: rgba(52, 96, 190);
 }
