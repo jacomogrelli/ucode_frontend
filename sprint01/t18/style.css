@@ -5,13 +5,15 @@
 }
 
 form {
-  display: grid;
-  grid-template-columns: 1fr 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 100vm;
 }
 
 .type {
   color: #52813a;
+  flex-grow: 1;
   border-radius: 3px;
   border-color: rgba(52, 96, 190);
 }
