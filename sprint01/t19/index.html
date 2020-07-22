@@ -6,19 +6,43 @@
   <meta charset="utf-8">
   <meta name="description" content="t19. Super back-up">
   <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,200;1,300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <h1 class="page-name">Superhero request form</h1>
   <h2 class="form-name">What do you need help with?</h2>
-  <form action="#">
+  <form action="/some">
     <div class="row-checkbox">
       <input class="custom-checkbox" type="checkbox" id="defeat" value="yes">
-      <label for=defeat>DEFEAT A VALLIAN</label>
+      <label for="defeat">DEFEAT A VALLIAN</label>
       <input class="custom-checkbox" type="checkbox" id="civilian" value="yes">
-      <label for="civilian"> SAVE A CIVILIAN </label>
+      <label for="civilian">SAVE A CIVILIAN</label>
       <input class="custom-checkbox" type="checkbox" id="robbery" value="yes">
-      <label for="robbery"> STOP A ROBBERY </label>
+      <label for="robbery">STOP A ROBBERY</label>
+    </div>
+    <div class="row-checkbox">
+      <input class="custom-checkbox" type="checkbox" id="apocalypse" value="yes">
+      <label for="apocalypse">PREVENT AN APOCALYPCE</label>
+      <input class="custom-checkbox" type="checkbox" id="train" value="yes">
+      <label for="train">TRAIN A SIDEKICK</label>
+    </div>
+    <div class="row-checkbox">
+      <input class="custom-checkbox" type="checkbox" id="other" value="yes">
+      <label for="other">OTHER STUFF</label>
+    </div>
+    <div class="row-textarea">
+      <input class="input-text" type="text" id="job-details" placeholder="&emsp;Job details">
+    </div>
+    <div class="row-textarea">
+      <input class="input-text" type="text" id="name" placeholder="&emsp;Name">
+      <input class="input-text" type="text" id="email" placeholder="&emsp;Email">
+    </div>
+    <div class="row-bottoms">
+      <input class="custom-checkbox" id="send" type="submit" value="SEND">
+      <label class="send-button" for="send">SEND</label>
     </div>
   </form>
 </body>
