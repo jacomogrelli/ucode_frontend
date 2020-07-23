@@ -1,0 +1,44 @@
+* {
+  font-family: sustem-ui, sans-serif;
+}
+
+#header {
+  color: #404750;
+  text-align: center;
+}
+
+#background {
+  background: #404750;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px;
+  border-collapse: collapse;
+}
+
+#centerBlock {
+  background: #4A525D;
+  border: 1px solid #696C71;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: repeat (3, 1fr);
+}
+
+#buttonsBlock {
+  background: #333a41;
+  border-radius: 0 20px 20px 0;
+}
+
+#buttonsBlock > label > img {
+  margin: 1em;
+}
+
+#buttonsBlock > label > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+ 
