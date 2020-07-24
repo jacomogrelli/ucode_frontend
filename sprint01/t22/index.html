@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <title></title>
+  <title>Settings</title>
   <meta charset="utf-8">
-  <meta name="description" content="">
+  <meta name="description" content="t22. Settings">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,7 +17,7 @@
         <select name="typeface" id="typeface">
           <option value="acunimPro">Acuniv Pro</option>
           <option value="comicSans">Comic Sans</option>
-          <option value="com">Times New Roman</option>
+          <option disabled value="com">Times New Roman</option>
         </select>
         <label for="typeface"></label>
       </div>
@@ -52,25 +52,25 @@
       </div>
       <div class="selectSize">
         <p>Size</p>
-        <input type="range" id="fontSize" min="12px" max="32px" step="1px" value="0">
+        <input type="range" id="fontSize" min="12" max="32" step="1" value="0">
         <label for="fontSize"></label>
       </div>
     </div>
     <nav id="buttonsBlock">
       <label for="settingsButton">
-        <input type="button" name="settings" id="settingsButton">
+        <input type="button" name="settings" id="settingsButton" value="settings">
         <img src="./assets/images/artistic-brush.png" alt="brush">
       </label><br>
       <label for="userButton">
-        <input type="button" name="user" id="userButton">
+        <input type="button" name="user" id="userButton" value="user">
         <img src="./assets/images/user-icon.png" alt="user">
       </label><br>
       <label for="messegeButton">
-        <input type="button" name="messege" id="messegeButton">
+        <input type="button" name="messege" id="messegeButton" value="messege">
         <img src="./assets/images/sms-speech-bubble.png" alt="messege">
       </label><br>
       <label for="screenButton">
-        <input type="button" name="screen" id="screenButton">
+        <input type="button" name="screen" id="screenButton" value="screen">
         <img src="./assets/images/computer-screen.png" alt="screen">
       </label><br>
     </nav>

@@ -200,18 +200,19 @@
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
-  background: #75B7A6;
+  background: #75b7a6;
   position: relative;
   bottom: 8px;
   border-radius: 50%;
 }
 
 .selectSize > input[type="range"]::-webkit-slider-runnable-track {
-  background: #3B424B;
+  background: #3b424b;
   height: 2px;
 }
 
-.selectSize > input::after, .selectSize > input::before {
+.selectSize > input::after,
+.selectSize > input::before {
   content: "A";
   position: relative;
   color: white;
@@ -246,8 +247,7 @@
   z-index: -1;
 }
 
-
-@media screen and (max-width:660px) {
+@media screen and (max-width: 660px) {
   #centerBlock {
     grid-template-columns: 1fr;
   }
