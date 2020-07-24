@@ -19,8 +19,42 @@
           <option value="comicSans">Comic Sans</option>
           <option value="com">Times New Roman</option>
         </select>
+        <label for="typeface"></label>
       </div>
-      
+      <div class="selectDarkUI">
+        <p>Dark UI</p>
+        <input type="checkbox" name="dakUI" id="darkUI">
+        <label for="darkUI"></label>
+      </div>
+      <div class="selectWeight">
+        <p>Weight</p>
+        <form>
+          <input type="radio" id="regular" name="weight" value="regular">
+          <label for="regular">Regular</label>
+          <input type="radio" id="bolt" name="weight" value="bolt">
+          <label for="bolt">Bolt</label>
+        </form>
+      </div>
+      <div class="selectColor">
+        <p>Color</p>
+        <div>
+          <input type="checkbox" name="color" id="blue">
+          <label for="blue"></label>
+          <input type="checkbox" name="color" id="green">
+          <label for="green"></label>
+          <input type="checkbox" name="color" id="pink">
+          <label for="pink"></label>
+          <input type="checkbox" name="color" id="yellow">
+          <label for="yellow"></label>
+          <input type="checkbox" name="color" id="orange">
+          <label for="orange"></label>
+        </div>
+      </div>
+      <div class="selectSize">
+        <p>Size</p>
+        <input type="range" id="fontSize" min="12px" max="32px" step="1px" value="0">
+        <label for="fontSize"></label>
+      </div>
     </div>
     <nav id="buttonsBlock">
       <label for="settingsButton">
