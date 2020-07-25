@@ -1,3 +1,0 @@
-klist
-kinit onechaiev
-kdestroy --all

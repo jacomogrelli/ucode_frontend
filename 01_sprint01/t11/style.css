@@ -1,0 +1,33 @@
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  font-family: Lato, Helvetica, serif;
+}
+
+.day {
+  display: inline-block;
+  text-align: center;
+}
+
+.picto img {
+  width: 7em;
+  margin: 0 auto;
+}
+
+.date {
+  background-color: #5693b2;
+  color: white;
+  font-weight: 400;
+  padding: 1px;
+  font-size: 1.5em;
+}
+
+.temp {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.day:hover {
+  box-shadow: 0 0 10px grey;
+}

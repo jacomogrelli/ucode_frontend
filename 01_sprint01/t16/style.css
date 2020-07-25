@@ -1,0 +1,81 @@
+.menu-header {
+  width: 80vw;
+  background: royalblue;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2em;
+  border-radius: 3px;
+  color: white;
+}
+
+* {
+  list-style: none;
+  text-align: center;
+}
+
+.top-menu {
+  margin: 0 auto;
+}
+
+.first-range {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  background: green;
+  border: 1px solid black;
+  margin: 20px;
+  border-radius: 2px;
+}
+
+.submenu-down {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.submenu-down > li {
+  width: 300px;
+  position: relative;
+  left: -61px;
+  margin: 2px 20px 2px 20px;
+  border-radius: 2px;
+  background: green;
+  border: 1px solid black;
+}
+
+.submenu-down > li > ul > li {
+  width: 300px;
+  position: relative;
+  left: 245px;
+  top: -21px;
+  margin: 2px 20px 2px 20px;
+  border-radius: 2px;
+  background: green;
+  border: 1px solid black;
+}
+
+.first-range:hover > .submenu-down {
+  visibility: visible;
+  position: absolute;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.first-range:hover > .submenu-down ul {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+
+.submenu-down > .cpp:hover > .submenu-cpp {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.submenu-down > .frontend:hover > .submenu-frontend {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}

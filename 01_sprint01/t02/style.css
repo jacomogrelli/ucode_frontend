@@ -1,0 +1,56 @@
+.header {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+
+.cell {
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #dad5cd;
+  padding: 10px;
+}
+
+.table-border {
+  border-collapse: collapse;
+  border: 2px solid #dad5cd;
+}
+
+.image {
+  height: 120px;
+  width: 120px;
+  border-radius: 15%;
+  margin: 10px;
+  /* прозрачная рамка в 1px */
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.darkgoldenrod {
+  background-color: #c49659;
+}
+
+.green {
+  background-color: #497b30;
+}
+
+.blue {
+  background-color: #30568a;
+}
+
+.yellow {
+  background-color: #fffd73;
+}
+
+.red {
+  background-color: #a5413a;
+}
+
+.viollet {
+  background-color: #7e77ae;
+}
+
+.link-style {
+  text-align: center;
+}

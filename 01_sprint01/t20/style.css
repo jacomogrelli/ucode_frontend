@@ -1,0 +1,30 @@
+.main-block {
+  height: 150px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background: green;
+  border-radius: 50%;
+  animation-name: slide-horizontal;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.circle:hover {
+  background: red;
+}
+
+@keyframes slide-horizontal {
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: calc(100% - 150px);
+  }
+}
