@@ -3,6 +3,7 @@
 *.o
 *.out
 .idea
+*.pdf
 tasks_and_attachments
 *.code-workspace
 *.json

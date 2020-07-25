@@ -1,0 +1,20 @@
+* {
+  font-family: 'Kanit', sans-serif;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  margin: 1%;
+  border: 1px solid black;
+}
+
+.singlSkill {
+  width: 30%;
+  background: #EFF0F1;
+  border-radius: 1em;
+  text-align: justify;
+  padding: 1em;
+  font-size: 1.5em;
+  
+}
