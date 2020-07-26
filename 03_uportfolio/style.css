@@ -2,6 +2,8 @@
   font-family: 'Kanit', sans-serif;
 }
 
+/* start of skill block */
+
 #skills {
   display: grid;
   grid-template-columns: 1fr 50px 1fr;
@@ -9,12 +11,113 @@
   border: 1px solid black;
 }
 
+.skillBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
 .singlSkill {
-  width: 30%;
+  text-decoration: none;
   background: #EFF0F1;
   border-radius: 1em;
   text-align: justify;
   padding: 1em;
-  font-size: 1.5em;
-  
+  margin: 5px;
+  font-size: 1.2em;
+  color: inherit;
+}
+
+.singlSkill span {
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  left: 1em;
+}
+
+h2 {
+  font-weight: 700;
+  position: relative;
+  left: 1em;
+}
+
+.singlSkill span::before, h2::before {
+  position: absolute;
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 50%;
+  background: blue;
+  content: "";
+  bottom: 0.2em;
+  left: -0.5em
+}
+
+.singlSkill:hover span::before, h2:hover::before {
+  animation: 1s 0.1s jump-point infinite ease-in-out;
+}
+
+.click {
+  visibility: hidden;
+  font-size: 0.8em;
+  color: darkgrey;
+  text-align: left;
+}
+
+.singlSkill:hover .click {
+  visibility: visible;
+}
+
+.weAreHere {
+  margin: 5px;
+  background: lightcoral;
+  position: relative;
+}
+
+.weAreHere span {
+  position: relative;
+  transform: rotate(180deg);
+  writing-mode: tb-rl;
+  top: 5%;
+  left: 2px;
+  font-size: 30px;
+}
+
+/* end of skills block */
+
+/* start of About block */
+
+
+@keyframes jump-point {
+  0%  {height: 0.4em;}
+  20% {height: 0.6em;}
+  50% {transform: translateY(-150%); border-radius: 50%;}
+  95% {height: 0.6em;}
+  100% {height: 0.4em;}
+}
+
+/* Large desktops and laptops */
+@media screen and (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+
 }
