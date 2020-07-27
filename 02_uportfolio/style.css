@@ -1,0 +1,155 @@
+* {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* start of skill block */
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  margin: 1%;
+}
+
+.skillBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.singleSkill, #aboutMe div:nth-child(2n + 1), .singleProject {
+  text-decoration: none;
+  background: #EFF0F1;
+  border-radius: 1em;
+  text-align: justify;
+  padding: 1em;
+  margin: 5px;
+  font-size: 1.2em;
+  color: inherit;
+}
+
+.singleSkill span, #aboutMe p, .singleProject p:first-child {
+  font-size: 1.3em;
+  font-weight: 700;
+  position: relative;
+  left: 1em;
+}
+
+h2 {
+  font-weight: 700;
+  position: relative;
+  left: 1em;
+}
+
+.singleSkill span::before, h2::before, .singleProject p:first-child::before{
+  position: absolute;
+  height: 0.4em;
+  width: 0.4em;
+  border-radius: 50%;
+  background: blue;
+  content: "";
+  bottom: 0.2em;
+  left: -0.5em
+}
+
+.singleSkill:hover span::before, h2:hover::before, .singleProject:hover p:first-child::before {
+  animation: 1s 0.1s jump-point infinite ease-in-out;
+}
+
+.click {
+  visibility: hidden;
+  font-size: 0.8em;
+  color: darkgrey;
+  text-align: left;
+}
+
+.singleSkill:hover .click {
+  visibility: visible;
+}
+
+.weAreHere {
+  margin: 5px;
+  background: lightcoral;
+  position: relative;
+}
+
+.weAreHere span {
+  position: relative;
+  transform: rotate(180deg);
+  writing-mode: tb-rl;
+  top: 5%;
+  left: 2px;
+  font-size: 30px;
+}
+
+/* end of skills block */
+
+/* start of Projects block */
+
+#porjects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.singleProject img {
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* end of Projects block */
+
+/* start of About block */
+
+#aboutMe {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.3fr;
+}
+
+#aboutMe div {
+  text-align: left !important;
+}
+
+#aboutMe img {
+  max-width: 300px;
+  min-width: 150px;
+  width: 100%;
+  /* border: 2px solid blue; */
+  border-radius: 50%;
+}
+
+/* end of About block */
+
+
+@keyframes jump-point {
+  0%  {height: 0.4em;}
+  20% {height: 0.6em;}
+  50% {transform: translateY(-150%); border-radius: 50%;}
+  95% {height: 0.6em;}
+  100% {height: 0.4em;}
+}
+
+/* Large desktops and laptops */
+@media screen and (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media screen and (max-width: 480px) {
+
+}
