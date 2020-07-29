@@ -1,6 +1,33 @@
 * {
   font-family: 'Kanit', sans-serif;
+  outline: none;
 }
+
+/* start of Navigation block */
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  height: 50px;
+  font-size: 1.2em;
+  font-weight: 700;
+  background: white;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+#navBar > li {
+  display: inline-block;
+}
+
+
 
 /* start of skill block */
 
@@ -40,9 +67,10 @@ h2 {
   font-weight: 700;
   position: relative;
   left: 1em;
+  margin-top: 50px;
 }
 
-.singleSkill span::before, h2::before, .singleProject p:first-child::before{
+ .singleSkill span::before, h2::before, .singleProject p:first-child::before{
   position: absolute;
   height: 0.4em;
   width: 0.4em;
@@ -53,7 +81,7 @@ h2 {
   left: -0.5em
 }
 
-.singleSkill:hover span::before, h2:hover::before, .singleProject:hover p:first-child::before {
+#navButton::before, .singleSkill:hover span::before, h2:hover::before, .singleProject:hover p:first-child::before {
   animation: 1s 0.1s jump-point infinite ease-in-out;
 }
 
@@ -90,14 +118,97 @@ h2 {
 #porjects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 1%;
 }
 
-.singleProject img {
-  height: 200px;
+.singleProject > div > a > img {
+  display: block;
   margin: 0 auto;
+  height: 200px;
 }
 
 /* end of Projects block */
+
+/* start of Contact form */
+
+#sendMessege > form {
+  display: grid;
+  grid-template-areas:
+    "sn se"
+    "sm sm"
+    "sb sb"
+  ;
+}
+
+#sendMessege input[type^="text"] {
+  border: none;
+  padding-left: 1em;
+  border-bottom: 1px solid #dddddd;
+  margin: 5px;
+  font-family: inherit !important;
+  font-size: 1.2em;
+}
+
+#sendMessege input[type^="text"]:focus {
+  box-shadow: 0 4px 3px -2px #dddddd;
+  transition: 0.1s
+}
+
+#sendMessege input[type^="submit"] {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+}
+
+#senderName {
+  grid-area: sn;
+}
+
+#senderEmail {
+  grid-area: se;
+}
+
+#senderMessege {
+  grid-area: sm;
+}
+
+#sendButton + label {
+  position: relative;
+  font-size: 1.4em;
+  grid-area: sb;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background: #dddddd;
+  color: #606060;
+  font-weight: 600;
+}
+
+ #sendButton:hover + label {
+  transition: 1s;
+  color: blue;
+}
+
+.email::before {
+  content: "nechaeff";
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.email::after {
+  content: "gmail.com";
+  font-family: inherit !important;
+  font-style: inherit !important;
+}
+
+/* end of Contact form */
 
 /* start of About block */
 
