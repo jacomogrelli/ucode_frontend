@@ -9,6 +9,5 @@ console.log(str1.toUpperCase());
 
 let str2 = `Laurel Hedare: "Game over."`;
 let str3 = `Selina Kyle: catwoman"Mmm seemsCatwomanlike everyCatWomanwoman you
-            try to savewindsCatWOMANup dead... or deeply resentful."`;
-substr = ['Cc']['Aa']['Tt']['Ww']['Oo'][]
-console.log(str3.replace(substr, " "));
+            try to savewindsCatWOMANup dead... or deeply resentful."`
+console.log(str3.replace(/catwoman/ig, " "));
