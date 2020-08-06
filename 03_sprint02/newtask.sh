@@ -21,6 +21,6 @@ java script, javascript js, c, css, html5, css3\">
   <script src=\"js/script.js\"></script>
 </body>
 
-</html>" > t$1/index.html
+</html>" >> t$1/index.html
 
-echo '"use strict"\n' > t$1/js/script.js
+echo '"use strict"\n' >> t$1/js/script.js
