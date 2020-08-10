@@ -32,8 +32,8 @@ let checkDivision = (beginRange, endRange) => {
 }
 
 let intMain = () => {
-  let getBegin = "50"; //prompt("Input the berin of the range")
-  let getEnd = "60"; //prompt("Input the begin of the range")
+  let getBegin = prompt("Input the berin of the range")
+  let getEnd = prompt("Input the begin of the range")
 
   if (getBegin.length == 0) {
     console.log(`Default value "1" was setted up`);
@@ -43,7 +43,7 @@ let intMain = () => {
     console.log(`Default value "100" was setted up`);
     getEnd = "100";
   }
-  if (+getBegin == NaN || +getEnd == NaN) {
+  if (isNaN(getBegin) || isNaN(getEnd)) {
     console.log("Wrong input, try again");
     intMain();
   }
