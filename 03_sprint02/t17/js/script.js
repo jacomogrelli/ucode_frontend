@@ -3,7 +3,7 @@
 let input = () => {
   let result = String(prompt("Input your first name")).toLowerCase();
 
-  if (/[a-z]/g.test(result))
+  if (/^[a-z]+$/g.test(result))
     return result.charAt(0).toUpperCase() + result.slice(1);
   return 0;
 }
