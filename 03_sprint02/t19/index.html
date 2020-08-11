@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <title>Brackets</title>
+  <meta charset="utf-8">
+  <meta name="description" content="t19. Brackets">
+  <meta name="author" content="Olekiy Nechayev">
+  <meta name="keywords" content="front-end, frontend, html,
+java script, javascript js, c, css, html5, css3">
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+  <h1>Brackets</h1>
+  <!-- script for testing -->
+  <script src="./js/script.js"></script>
+  <!-- the script with tests (describe, it...) -->
+  <script src="./js/test.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>

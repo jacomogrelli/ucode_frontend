@@ -1,6 +1,12 @@
 "use strict"
 
-let sortMethod = (a, b) => {
+// ninja-style
+let sortEvenOdd = (arr) => {
+  arr.sort(function (a, b) { return a % 2 - b % 2 || a - b; });
+}
+
+// regular-style
+/* let sortMethod = (a, b) => {
   if (a > b)
     return 1;
   if (a === b)
@@ -39,15 +45,8 @@ let sortEvenOdd = (arr) => {
       if (arr[i] > arr[i + 1])
         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
   }
-}
+} */
 
 // const arr = [6, 2, 15, 5, 1, 3, 8, 1, 8, 10, 7, 11];
 // sortEvenOdd(arr);
 // console.log(arr); // (12) [2, 6, 8, 8, 10, 1, 1, 3, 5, 7, 11, 15]
-
-// trohalska magic
-function sortEvenOdd(arr) {
- arr.sort(function(a, b) {
-   return a % 2 - b % 2 || a - b;
-});
-}
