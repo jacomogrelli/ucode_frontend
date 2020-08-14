@@ -1,23 +1,21 @@
 "use strict"
 
-let concat = (s1, s2) => {
+function concat(s1, s2) {
   oneArg.count = 0;
 
   function oneArg() {
     let s2 = prompt('Enter second string: ');
+    if (s2 === null) return s1;
 
-    if (s2 === "null")
-      return s1;
     oneArg.count++;
     return s1 + ' ' + s2;
   }
 
-  if (s2 === "undefined")
+  if (s2 === undefined)
     return oneArg;
   else
     return s1 + ' ' + s2;
 }
-
 
 // //test cases
 // let phrase1 = concat("Hulk", "smash!");
