@@ -8,4 +8,3 @@ tasks_and_attachments
 *.code-workspace
 *.json
 do_not_push.html
-newtask.sh
