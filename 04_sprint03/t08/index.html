@@ -5,7 +5,7 @@
   <title>Sort table</title>
   <meta charset="utf-8">
   <meta name="description" content="t08. Sort table">
-  <meta name="author" content="Olekiy Nechayev">
+  <meta name="author" content="Oleksiy Nechayev">
   <meta name="keywords" content="front-end, frontend, html,
 java script, javascript js, c, css, html5, css3">
   <meta name="viewport" content="width=device-width, initial-scale-1">
@@ -16,9 +16,34 @@ java script, javascript js, c, css, html5, css3">
 <body>
 <main>
   <h1>Sort table</h1>
-  <div id="placeholder">Placeholder with <b>HTML</b></div>
-  <div id="notification">Click on cell to sort the column</div>
-</main>
+  <div id="placeholder">Placeholder with <b>HTML</b>
+    <table id="heroTable">
+      <thead>
+      <tr>
+        <td>
+          <input id="nameBtn" type="button" onclick="sortTable(`name`)" value="Name">
+          <!--        <lable for="nameBtn">Name</lable>-->
+        </td>
+        <td>
+          <input id="strengthBtn" type="button" onclick="sortTable(`strength`)" value="Strength">
+          <!--        <lable for="strengthBtn">Strength</lable>-->
+        </td>
+        <td>
+          <input id="ageBtn" type="button" onclick="sortTable(`age`)" value="Age">
+          <!--        <lable for="ageBtn">Age</lable>-->
+        </td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Black Panter</td>
+        <td>66</td>
+        <td>53</td>
+      </tr>
+      </tbody>
+    </table>
 </body>
-
+</div>
+<div id="notification">Click on cell to sort the column</div>
+</main>
 </html>
