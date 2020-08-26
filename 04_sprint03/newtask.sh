@@ -10,7 +10,7 @@ echo "<!DOCTYPE html>
   <title>$2</title>
   <meta charset=\"utf-8\">
   <meta name=\"description\" content=\"t$1. $2\">
-  <meta name=\"author\" content=\"Olekiy Nechayev\">
+  <meta name=\"author\" content=\"Oleksiy Nechayev\">
   <meta name=\"keywords\" content=\"front-end, frontend, html,
 java script, javascript js, c, css, html5, css3\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale-1\">

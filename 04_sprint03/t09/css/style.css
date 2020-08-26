@@ -1,0 +1,46 @@
+#mainPlace {
+  background:  #333333;
+  text-align:  center;
+  font-family: 'Lato', sans-serif;
+  padding:     1em;
+  /*min-width: ;*/
+}
+
+#mainPlace > span {
+  color:       white;
+  font-size:   2em;
+  font-weight: bold;
+}
+
+#gameBoard {
+  display:         flex;
+  flex-wrap:       nowrap;
+  justify-content: space-around;
+
+}
+
+#gamePad {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width:             400px;
+  grid-gap:              10px;
+}
+
+#gamePad > div {
+  width:      150px;
+  height:     150px;
+  background: #c1c1c1;
+  box-shadow: 5px 5px #cd903c;
+}
+
+#infoBar {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: #c1c1c1;
+  padding: 10px;
+}
+
+#plrOneBar, #plrTwoBar {
+  margin: 5px;
+  background: #D3D3D3;
+}
