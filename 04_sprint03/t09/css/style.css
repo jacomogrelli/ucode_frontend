@@ -64,6 +64,9 @@
 #resultInfoBar {
   height:      150px;
   line-height: 150px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 #gameResetBtn {
