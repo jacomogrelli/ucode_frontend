@@ -60,47 +60,114 @@ let changeBackground = (id) => {
   }
 }
 
-let winDrawChecker = () => {
-  //check rows for win
-  for (let i = 0; playBox[i]; i++) {
-    if ((playBox[i][0] === playBox[i][1] && playBox[i][0] === playBox[i][2]
-      && playBox[i][0] !== 0)
-      || (playBox[0][i] === playBox[1][i] && playBox[0][i] === playBox[2][i]
-      && playBox[i][0] !== 0)) {
-      let result = document.querySelector(`#resultInfoBar`);
-      result.innerHTML = `Player ${playBox[i][0]} won!`;
-      changeBackground(3);
-      listener(false);
-    }
+/*
+ * Function change color of elements in winner line to green
+ * argument type - type of winner line
+ * argument num - number of winner line or column
+ */
+let changeSymbolColor = (type, num) => {
+  for (let i = 0, j = 3; i < 3; i++, j--) { //j - for diagonal
+    let winArea;
+    if (type === `row`)
+      winArea = document.querySelector(`#area${num + 1}x${i + 1} > div`);
+    if (type === `column`)
+      winArea = document.querySelector(`#area${i + 1}x${num + 1} > div`);
+    if (type === `backSlash`)
+      winArea = document.querySelector(`#area${i + 1}x${i + 1} > div`);
+    if (type === `slash`)
+      winArea = document.querySelector(`#area${j}x${i + 1} > div`);
+    if (winArea.className === `cross`)
+      winArea.style.backgroundColor = `#367533`;
+    if (winArea.className === `circle`)
+      winArea.style.border = `18px solid #367533`;
   }
 }
 
+let winDrawChecker = () => {
+  let winner = 0;
+  let result = document.querySelector(`#resultInfoBar`);
+
+  // check for winners
+  for (let i = 0; playBox[i]; i++) {
+    // check diagonals
+    if (i === 0 && playBox[1][1] !== 0) {
+      if (playBox[0][0] === playBox[1][1] && playBox[0][0] === playBox[2][2]) {
+        winner = playBox[1][1];
+        changeSymbolColor(`backSlash`,);
+      }
+      if (playBox[2][0] === playBox[1][1] && playBox[2][0] === playBox[0][2]) {
+        winner = playBox[1][1];
+        changeSymbolColor(`slash`,);
+      }
+    }
+    // check rows
+    if (playBox[i][0] === playBox[i][1] && playBox[i][0] === playBox[i][2]
+      && playBox[i][0] !== 0) {
+      winner = playBox[i][0];
+      changeSymbolColor(`row`, i);
+    }
+    // check columns
+    if (playBox[0][i] === playBox[1][i] && playBox[0][i] === playBox[2][i]
+      && playBox[0][i] !== 0) {
+      winner = playBox[0][i];
+      changeSymbolColor(`column`, i);
+    }
+  }
+  if (winner !== 0) {
+    result.innerHTML = `Player ${winner} won!`;
+    changeBackground(3);
+    listener(false);
+    return;
+  }
+  if (turnsCounter === 9) {
+    result.innerHTML = `It\'s a draw!`;
+    changeBackground(4);
+  }
+}
+
+/*
+ * Function place symbol to checked div (argument str contain id of required div
+ */
 let makeTurn = (str) => {
   let divArea = document.querySelector(`#${str}`);
   let element = document.createElement(`div`);
   let turnCounterArea = document.querySelector(`#nmbrTurnCounter`);
 
-  if (turnsCounter % 2 === 0) {
-    element.className = `cross`;
-    changeBackground(2);
-    playBox[+str.charAt(4) - 1][+str.charAt(6) - 1] = 1;
+  if (str !== `false`) {
+    // if turn made by player 1, var turnsCounter is always even when player 1
+    // have to turn
+    if (turnsCounter % 2 === 0) {
+      element.className = `cross`;
+      changeBackground(2);
+      // add to playBox array
+      playBox[+str.charAt(4) - 1][+str.charAt(6) - 1] = 1;
+    }
+    // if turn made by player 2, var turnsCounter is always odd when player 2
+    // have to turn
+    if (turnsCounter % 2 !== 0) {
+      element.className = `circle`;
+      changeBackground(1);
+      // add to playBox array
+      playBox[+str.charAt(4) - 1][+str.charAt(6) - 1] = 2;
+    }
+    divArea.appendChild(element);
+    turnsCounter += 1;
+    turnCounterArea.innerHTML = `${turnsCounter}`;
+    if (turnsCounter > 4) // 5 turns is minimal to win
+      winDrawChecker();
   }
-  if (turnsCounter % 2 !== 0) {
-    element.className = `circle`;
-    changeBackground(1);
-    playBox[+str.charAt(4) - 1][+str.charAt(6) - 1] = 2;
-  }
-  divArea.appendChild(element);
-  turnsCounter += 1;
-  turnCounterArea.innerHTML = `${turnsCounter}`;
-  winDrawChecker();
 }
 
+/*
+ * Function add event listener for each div in gamePad area if flad === true
+ * And remove id attribute if flag === false for impossibility turn unused
+ * divs
+ */
 let listener = (flag) => {
   let areas = document.querySelectorAll(`.areas`);
   let reset = document.querySelector(`#gameResetBtn`)
 
-  if (flag) {
+  if (flag === true) {
     for (let i = 0; areas[i]; i++)
       areas[i].addEventListener(`click`, () => {
         makeTurn(areas[i].getAttribute(`id`))
@@ -108,18 +175,12 @@ let listener = (flag) => {
     reset.addEventListener(`click`, () => {
       window.location.reload()
     })
-  } else {
-    for (let i = 0; areas[i]; i++)
-      areas[i].removeEventListener(`click`, () => {
-        makeTurn(areas[i].getAttribute(`id`))
-      });
   }
+  if (flag === false)
+    for (let i = 0; areas[i]; i++)
+      areas[i].setAttribute(`id`, `false`)
 }
 
-let intMain = () => {
-  playBoxZeroFill();
-  listener(true);
-  changeBackground(1);
-}
-
-intMain();
+playBoxZeroFill();
+listener(true);
+changeBackground(1);
