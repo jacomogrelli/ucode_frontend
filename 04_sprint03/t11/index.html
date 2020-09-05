@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <title>Notes with cookies</title>
+  <meta charset="utf-8">
+  <meta name="description" content="t11. Notes with cookies">
+  <meta name="author" content="Oleksiy Nechayev">
+  <meta name="keywords" content="front-end, frontend, html,
+java script, javascript js, c, css, html5, css3">
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+<h1>Notes with cookies</h1>
+<div id="cookiesBox">
+  <div id="buttonsBlock">
+    <input type="button" id="addBtn" onclick="addCookies()" value="Add to cookies">
+    <input type="button" id="clearBtn" value="Clear cookies">
+  </div>
+  <div id="textArea">
+    <label>Text input:</label><br>
+    <textarea id="cookiesText"  rows="5" maxlength="500" placeholder="Enter note text..."></textarea>
+  </div>
+  <div id="notesArchive">
+    <span>Notes archive</span>
+    <div id="notesTextArea">
+      <span>[Empty]</span>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
