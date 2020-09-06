@@ -15,7 +15,6 @@ console.log(user);
 let cpy = copyObj(user);
 console.log(cpy);
 // {name: "Steve", surname: "Rogers", age: 101, city: "New York"}
-
 user.name= 'John';
 console.log(user);
 // {name: "John", surname: "Rogers", age: 101, city: "New York"}

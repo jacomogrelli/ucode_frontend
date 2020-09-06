@@ -11,14 +11,14 @@ function Calculator() {
   this.alert = () => setTimeout(() => alert(this.res), 5000);
 }
 
-// // test cases
-// const calc = new Calculator();
-//
-// console.log(
-//   calc.init(2), // 2
-//   calc.add(2),  // 4
-//   calc.mul(3),  // 12
-//   calc.div(4),  // 3
-//   calc.sub(2),  // 1
-// );
-// calc.alert()    // 1
+// test cases
+const calc = new Calculator();
+
+console.log(
+  calc.init(2), // 2
+  calc.add(2),  // 4
+  calc.mul(3),  // 12
+  calc.div(4),  // 3
+  calc.sub(2),  // 1
+);
+calc.alert()    // 1
