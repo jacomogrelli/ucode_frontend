@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  font-family: "TSTAR W00 Heavy";
+}
+
+@font-face {
+  font-family: "TSTAR W00 Heavy";
+  src: url("../assets/fonts/TSTAR_W00_Heavy.woff") format("woff"),
+       url("../assets/fonts/TSTAR_W00_Heavy.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
