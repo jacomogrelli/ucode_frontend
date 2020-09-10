@@ -9,6 +9,8 @@
   <meta name="author" content="Oleksiy Nechayev">
   <meta name="keywords" content="front-end, frontend, html, java script, javascript js, c, css, html5, css3">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/site_images/favicon.ico">
   <script src="js/script.js" defer></script>
   <title>ushop</title>
 
@@ -16,22 +18,57 @@
 <body>
 <header class="navigation">
   <div class="logo">
-    <img src="./assets/siteImages/redwing-logo.svg" alt="Red Wing Logo">
+    <img src="./assets/site_images/redwing-logo.svg" alt="Red Wing Logo">
   </div>
-  <nav class="navMenu">
+  <nav class="nav-menu">
     <ul class="menu">
-      <li class="navItem"><a href="#" class="navLink">Work</a></li>
-      <li class="navItem"><a href="#" class="navLink">Heritage</a></li>
-      <li class="navItem"><a href="#" class="navLink">Accessories</a></li>
-      <li class="navItem"><a href="#" class="navLink">Find a store</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Heritage</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
     </ul>
   </nav>
-<div class="searchBlock">
-  <div class="search">
-    <input type="text" class="searchForm" placeholder="Search"> <a href="#"
-                                                                   class="searchBtn"><i class="fas faSearch"></i></a>
+  <div class="search-block">
+    <div class="search">
+      <input type="text" class="search-form" placeholder="Search"> <a href="#" class="search-btn"><i
+        class="fas fa-search"></i></a>
+    </div>
+  </div>
+  <div class="personal-item">
+    <div class="auth">
+      <div class="login">
+        <a href="#" class="auth-link"><i class="fas fa-user-circle"></i>Sing in</a>
+      </div>
+      <div class="cart">
+        <a href="#" class="auth-link"><i class="fas fa-shopping-cart"></i>Shoping Cart</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="main-information">
+  <div class="text-inform">
+    <h1><strong>PECOS BOOTS 8159</strong></h1>
+    <p class="tagline">A classic Red Wing design from our Western boot collection.</p>
+    <div class="inform-link">
+      <div class="inform-btn read">Read more</div>
+      <div class="inform-btn shop">Read more</div>
+    </div>
+  </div>
+  <div class="photo-model">
+    <img src="./assets/images/pecos_8159/8159_front.jpg" alt="Pecos 8159">
   </div>
 </div>
-</header>
+<footer class="social">
+  <div class="find">
+    <a href="#"><i class="fa fa-map-marked-alt"></i>Find a store</a>
+  </div>
+  <div class="social-menu">
+    <h4 class="connect">Keep in touch</h4>
+    <ul class="social-icon">
+      <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#" class="social-link"><i class="fab fa-youtube-square"></i></a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>
