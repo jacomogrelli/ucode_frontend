@@ -6,6 +6,7 @@ body {
   margin:         0;
   padding:        0;
   z-index:        1;
+  font-size:      16px;
 }
 
 /*====== Style for header ======*/
@@ -46,7 +47,7 @@ body {
 .nav-link {
   text-decoration: none;
   color:           #e01533;
-  font-size:       16px;
+  font-size:       1em;
   border-bottom:   2px solid transparent;
   transition:      .3s;
 }
@@ -71,19 +72,20 @@ body {
 
 .search-form {
   padding:       5%;
-  width:         90%;
+  width:         80%;
   height:        25px;
   z-index:       10;
   border-radius: 30px;
   border:        none;
   outline:       none;
   color:         #6f6f6f;
+  font-size: 1em;
 }
 
 .search-btn {
   color:           #e01533;
-  font-size:       17px;
-  width:           10%;
+  font-size:       1em;
+  width:           20%;
   display:         flex;
   justify-content: center;
   align-items:     center;
@@ -105,76 +107,96 @@ body {
   align-items:     center;
   color:           #6f6f6f;
   text-decoration: none;
-  font-size:       16px;
+  font-size:       1em;
   transition:      .3s;
 }
 
 .auth-link i {
   padding:   0 5px;
-  font-size: 20px;
+  font-size: 1.4em;
   color:     #e01533;
 }
 
 .auth-link:hover { color: #e01533; }
 
 /*====== Style of mobile menu ======*/
+
+.mobile-navigation {display: none; }
+
 .burger-link {
-  /*display: none;*/
-  position: absolute;
-  top: 3%;
-  right: 10%;
-  height: 40px;
-  width: 40px;
+  position:      absolute;
+  top:           3%;
+  right:         10%;
+  height:        40px;
+  width:         40px;
   border-radius: 50%;
-  border: 2px solid #e01533;
-  background: #fff;
-  z-index: 100;
+  border:        2px solid #e01533;
+  background:    #fff;
+  z-index:       100;
 }
 
-.burger-link span, .burger-link span:before, .burger-link span:after {
-  display: block;
-  height: 2px;
-  width: 18px;
-  background-color: #333;
+.burger-link .fa-bars {
+  position: relative;
+  top:      8px;
+  left:     10px;
+}
+
+.fa-bars:before {
+  opacity:   1;
+  color:     black;
+  font-size: 24px;
+}
+
+.burger-link .fa-times {
+  opacity:  0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -9px;
-  margin-top: 0;
+  top:      5px;
+  left:     9px;
 }
 
-.burger-link span:before {
-  transition: all .3s;
-  margin-top: 6px;
-  content: '';
+.burger-link .fa-times:before {
+  font-size: 30px;
+  color:     black;
 }
 
-.burger-link span:after {
-  transition: all .3s;
-  margin-top: -8px;
-  content: '';
+.mobile-nav {
+  position:        absolute;
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  width:           100%;
+  height:          100vh;
+  background:      #e01533;
+  transition:      .5s;
+  z-index:         99;
 }
 
-.burger-link:active span:after {
-  transform: rotate(45deg);
-  margin-top: 0;
+.mobile-menu {
+  list-style: none;
+  text-align: center;
 }
 
-.burger-link:active span:before {
-  transform: rotate(-45deg);
-  margin-top: 0;
+.menu-item {
+  display:         flex;
+  justify-content: center;
+  align-items:     center;
+  margin-top:      10px auto;
 }
 
-.burger-link:active span:before {
-  background: transparent;
+.menu-link {
+  color:           #fff;
+  font-size:       20px;
+  letter-spacing:  3px;
+  z-index:         1;
+  text-decoration: none;
+  transition:      .3s;
 }
 
+.menu-link:active { text-decoration: underline; }
 
 /*====== Style of main information ======*/
 
 .main-information {
-  /*position:        relative;*/
-  /*top:             200px;*/
   display:         flex;
   justify-content: space-around;
   align-items:     center;
@@ -186,7 +208,7 @@ body {
 
 .text-inform h1 {
   color:     #000;
-  font-size: 70px;
+  font-size: 4em;
   margin:    0;
   padding:   0;
 }
@@ -198,7 +220,7 @@ body {
 
 .tagline {
   color:     #6f6f6f;
-  font-size: 20px;
+  font-size: 1.3em;
   margin:    10px 0;
   padding:   0;
 }
@@ -206,28 +228,38 @@ body {
 .inform-link {
   margin-top:      20px;
   display:         flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items:     center;
-  width:           70%;
+  width:           100%;
 }
 
 .inform-btn {
   border:          2px solid #e01533;
   border-radius:   20px;
   text-decoration: none;
-  font-size:       18px;
+  font-size:       1.3em;
   padding:         3px 15px;
   transition:      .3s;
 }
 
-.read, .shop {
+.read {
   color:      #e01533;
   background: #fff;
 }
 
-.read:hover, .shop:hover {
+.shop {
   color:      #fff;
   background: #e01533;
+}
+
+.read:hover {
+  color:      #fff;
+  background: #e01533;
+}
+
+.shop:hover {
+  color:      #e01533;
+  background: #fff;
 }
 
 .photo-model img { height: 400px; }
@@ -246,12 +278,12 @@ body {
 }
 
 .find a {
-  display:         flex;
+  display:         inline-block;
   justify-content: center;
   align-items:     center;
   color:           #e01533;
   text-decoration: none;
-  font-size:       16px;
+  font-size:       1em;
   transition:      .3s;
 }
 
@@ -259,17 +291,21 @@ body {
 
 .find i {
   padding:                   0 5px;
-  font-size:                 20px;
+  font-size:                  1.3em;
   margin-top:                -5px;
   animation:                 place 1s infinite;
   animation-timing-function: linear;
+}
+
+.find span {
+  animation: none;
 }
 
 .connect {
   padding:     0;
   margin:      0;
   color:       #e01533;
-  font-size:   16px;
+  font-size:   1em;
   font-weight: lighter;
   text-align:  right;
 }
@@ -281,7 +317,7 @@ body {
 }
 
 .social-link {
-  font-size:  16px;
+  font-size:  1em;
   color:      #e01533;
   transition: .3s;
 }
