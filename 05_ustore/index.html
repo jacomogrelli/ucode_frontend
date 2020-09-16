@@ -15,87 +15,116 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-          crossorigin="anonymous" defer></script>
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"
+          defer></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-          crossorigin="anonymous" defer></script>
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"
+          defer></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-          crossorigin="anonymous" defer></script>
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"
+          defer></script>
   <!--End of Bootstrap block-->
   <script src="js/script.js" defer></script>
   <title>ushop</title>
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"> <img src="./assets/site_images/redwing-logo.svg" alt="Red Wing" onclick="pageReload()"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<header class="navigation">
-  <div class="logo">
-    <img src="./assets/site_images/redwing-logo.svg" alt="Red Wing Logo">
-  </div>
-  <nav class="nav-menu">
-    <ul class="menu">
-      <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Heritage</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown custom-dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false"> MEN`S FOOTWEAR </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">PECOS BOOTS</a>
+          <a class="dropdown-item" href="#">IRON RANGER BOOTS</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">More...</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown custom-dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false"> WOMEN`S FOOTWEAR </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">CAROL WOMEN'S BOOT</a>
+          <a class="dropdown-item" href="#">ENGINEER WOMEN'S BOOT</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">More...</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown custom-dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false"> ACCESSORIES & CARE </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">CARE PRODUCTS & OILS</a>
+          <a class="dropdown-item" href="#">GLOVES</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">More...</a>
+        </div>
+      </li>
     </ul>
-  </nav>
-  <div class="search-block">
-    <div class="search">
-      <input type="text" class="search-form" placeholder="Search"> <a href="#" class="search-btn"><i
-        class="fas fa-search"></i></a>
+    <form class="form-inline my-2 my-lg-0 custom-search">
+      <input class="form-control mr-sm-2 custom-search-input" type="search" placeholder="Search" aria-label="Search">
+      <button class="custom-search-btn"
+              type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="personal-item">
+      <div class="auth">
+        <div class="login">
+          <a href="#" class="auth-link"><i class="fas fa-user-circle"></i><span>Sing in</span></a>
+        </div>
+        <div class="cart">
+          <a href="#" class="auth-link"><i class="fas fa-shopping-cart"></i><span>Shoping Cart</span></a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="personal-item">
-    <div class="auth">
-      <div class="login">
-        <a href="#" class="auth-link"><i class="fas fa-user-circle"></i>Sing in</a>
+</nav>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/site_images/slideshow_1.jpg" class="d-block w-100 carousel-img" alt="...">
+      <div class="carousel-caption">
+        <h2>AUTUMN COLOURS WITH THE BLACKSMITH 3343</h2>
+        <button type="button" class="btn btn-secondary btn-lg">Buy it now</button>
       </div>
-      <div class="cart">
-        <a href="#" class="auth-link"><i class="fas fa-shopping-cart"></i>Shoping Cart</a>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/site_images/slideshow_2.jpg" class="d-block w-100 carousel-img" alt="...">
+      <div class="carousel-caption">
+        <h2>THE SUPER STYLISH WOMEN'S IRON RANGER</h2>
+        <button type="button" class="btn btn-secondary btn-lg">Buy it now</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/site_images/slideshow_3.jpg" class="d-block w-100 carousel-img" alt="...">
+      <div class="carousel-caption">
+        <h2>LEATHER GOODS MAKE GREAT GIFTS</h2>
+        <button type="button" class="btn btn-secondary btn-lg">Buy it now</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/site_images/slideshow_4.jpg" class="d-block w-100 carousel-img" alt="...">
+      <div class="carousel-caption">
+        <h2>WEEKENDER CAMP OXFORD MOC</h2>
+        <button type="button" class="btn btn-secondary btn-lg">Buy it now</button>
       </div>
     </div>
   </div>
-</header>
-<div class="mobile-navigation">
-  <a href="#" class="burger-link"> <i class="fas fa-bars open-menu"></i> <i class="fas fa-times close-menu"></i>
-    <!--    <span></span>-->
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
   </a>
-  <div class="mobile-nav">
-    <ul class="mobile-menu">
-      <li class="menu-item"><a href="#" class="menu-link">Sing in</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Work</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Heritage</a></li>
-      <li class="menu-item"><a href="#" class="menu-link">Accessories</a></li>
-    </ul>
-  </div>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<div class="main-information">
-  <div class="text-inform">
-    <h1><strong>PECOS BOOTS 8159</strong></h1>
-    <p class="tagline">A classic Red Wing design from our Western boot collection.</p>
-    <div class="inform-link">
-      <div class="inform-btn read">Read more</div>
-      <div class="inform-btn shop">Buy it now</div>
-    </div>
-  </div>
-  <div class="photo-model">
-    <img src="./assets/images/pecos_8159/8159_front.png" alt="Pecos 8159">
-  </div>
-</div>
-<footer class="social">
-  <div class="find">
-    <a href="#"><i class="fas fa-map-marker-alt"></i>Find a store</a>
-  </div>
-  <div class="social-menu">
-    <h4 class="connect">Keep in touch</h4>
-    <ul class="social-icon">
-      <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
-      <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="#" class="social-link"><i class="fab fa-youtube-square"></i></a></li>
-    </ul>
-  </div>
-</footer>
 </body>
 </html>

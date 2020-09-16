@@ -5,7 +5,7 @@ let getNumber = () => {
 
   switch(userInput) {
     case "1":
-      userInput = +userInput * 2 / 'a';
+      userInput = +userInput * 2 / `a`;
       alert(userInput);
       break;
     case "2":
