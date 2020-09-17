@@ -8,6 +8,13 @@ body {
   color: #cb323b !important;
 }
 
+.custom-navbar {
+  position:   fixed !important;
+  z-index:    100 !important;
+  width:      100vw;
+  background: rgba(255, 255, 255, 1) !important;
+}
+
 .custom-search {
   background-color: #fff;
   border-width:     2px;
@@ -48,8 +55,8 @@ input[type="search"]:focus {
   display:         flex;
   justify-content: space-between;
   align-items:     center;
-  /*min-width: 210px;*/
   width:           100%;
+  margin-right:    2vw;
 }
 
 .auth-link {
@@ -72,7 +79,46 @@ input[type="search"]:focus {
 
 /*====== Custom style for carousel ======*/
 
+#carouselExampleControls {
+  top: 102px !important;
+}
 
+.carousel-caption-first {
+  bottom: 60% !important;
+  left:   20% !important;
+}
+
+.carousel-caption-second {
+  bottom: 25% !important;
+}
+
+.carousel-caption-third {
+  bottom: 65% !important;
+  left:   -10% !important;
+  color:  #cb323b !important;
+}
+
+.carousel-caption-third button {
+  color: #cb323b !important;
+}
+
+.carousel-caption-fourth {
+  bottom: 14% !important;
+}
+
+.carousel-caption-first > button,
+.carousel-caption-second > button,
+.carousel-caption-third > button,
+.carousel-caption-fourth > button {
+  background-color: rgba(108, 117, 125, 0) !important;
+}
+
+.carousel-caption-first > button:hover,
+.carousel-caption-second > button:hover,
+.carousel-caption-third > button:hover,
+.carousel-caption-fourth > button:hover {
+  background-color: rgba(108, 117, 125, 0.4) !important;
+}
 
 @font-face {
   font-family: "TSTAR W00 Heavy";
@@ -95,5 +141,10 @@ input[type="search"]:focus {
 
   .auth-link > span { display: flex; }
 
-  .auth-link { margin-left: 0; }
+  .personal-item { margin-left: 0; }
+
+  .custom-navbar {background: rgba(255, 255, 255, 0.9) !important;}
+
+  #carouselExampleControls { display: none !important; }
 }
+
