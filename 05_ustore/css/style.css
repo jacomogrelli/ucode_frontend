@@ -79,9 +79,9 @@ input[type="search"]:focus {
 
 /*====== Custom style for carousel ======*/
 
-#carouselExampleControls {
-  top: 102px !important;
-}
+/*#carouselExampleControls {*/
+/*  top: 102px !important;*/
+/*}*/
 
 .carousel-caption-first {
   bottom: 60% !important;
