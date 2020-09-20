@@ -132,21 +132,71 @@
 <!-- End of image slider -->
 <div class="container">
   <div class="row">
-    <div class="col-md-4 fileters">
+    <div class="col-md-4 filters">
       <!-- Sorting -->
-      <div class="dropdown custom-sorting">
+      <div class="dropdown custom-dropdown-sort">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-          Sort by:
+          Sort by: Name
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Name</a>
-          <a class="dropdown-item" href="#">Price (lowest first)</a>
-          <a class="dropdown-item" href="#">Price (highest first)</a>
+        <div class="dropdown-menu" id="custom-sort" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Name</a> <a class="dropdown-item" href="#">Price (lowest first)</a> <a
+            class="dropdown-item" href="#">Price (highest first)</a>
+        </div>
+      </div>
+      <!-- Max price range -->
+      <div class="input-group mb-3 custom-set-max-price">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Set max price range</span>
+        </div>
+        <input type="text" class="form-control" placeholder="$ 600" aria-label="Default"
+               aria-describedby="inputGroup-sizing-default">
+      </div>
+      <!-- Section: Size -->
+      <div class="custom-check-size">
+        <div class="container">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="6">
+            <lable class="custom-check-indicator" for="inlineCheckbox1"></lable>
+            <label class="form-check-label" for="inlineCheckbox1">US 6</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="7">
+            <lable class="custom-check-indicator" for="inlineCheckbox2"></lable>
+            <label class="form-check-label" for="inlineCheckbox2">US 7</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="8">
+            <lable class="custom-check-indicator" for="inlineCheckbox3"></lable>
+            <label class="form-check-label" for="inlineCheckbox3">US 8</label>
+          </div>
+        </div>
+        <div class="container">
+          <a class="btn btn-link text-muted p-0" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+             aria-controls="collapseExample"> More... </a>
+        </div>
+        <div class="container collapse pt-3" id="collapseExample">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="9">
+            <lable class="custom-check-indicator" for="inlineCheckbox4"></lable>
+            <label class="form-check-label" for="inlineCheckbox4">US 9</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="10">
+            <lable class="custom-check-indicator" for="inlineCheckbox5"></lable>
+            <label class="form-check-label" for="inlineCheckbox5">US 10</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="11">
+            <lable class="custom-check-indicator" for="inlineCheckbox6"></lable>
+            <label class="form-check-label" for="inlineCheckbox6">US 11</label>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-8 catalog" style="border: 2px solid black"></div>
+    <div class="col-md-8 catalog">
+
+    </div>
   </div>
 </div>
 </body>

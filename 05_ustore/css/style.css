@@ -120,6 +120,88 @@ input[type="search"]:focus {
   background-color: rgba(108, 117, 125, 0.4) !important;
 }
 
+/*====== Style for filters block ======*/
+
+input[type=text]:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.filters > div {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+#dropdownMenuButton {
+  width:      80% !important;
+  background: #cb323b;
+  outline:    none !important;
+}
+
+#dropdownMenuButton:focus {
+  box-shadow: none !important;
+  background: #bb323b;
+}
+
+#dropdownMenuButton ~ div > a { color: #cb323b; }
+
+#dropdownMenuButton ~ div { width: 80%; }
+
+.custom-set-max-price { width: 80% !important; }
+
+.custom-set-max-price span {
+  background: #cb323b !important;
+  color:      white;
+}
+
+[id^="inlineCheckbox"] {
+  display:  none !important;
+  z-index:  -1;
+  position: absolute;
+}
+
+[id^="inlineCheckbox"] ~ label:not(empty) {
+  color: #6e757c !important;
+}
+
+.custom-check-size {
+  border: 1px solid #CFD4DA;
+  border-radius: .25rem;
+  padding: .3rem;
+  width: 80%;
+  white-space: nowrap;
+}
+.custom-check-size > div { margin: 0 auto !important;}
+
+.custom-check-indicator {
+  height:        1rem;
+  width:         1rem;
+  border:        1px solid #cfd4da;
+  border-radius: 50%;
+  margin-right:  .3rem;
+}
+
+[id^="inlineCheckbox"]:checked ~ .custom-check-indicator {
+  background: #cb323b;
+  content:    "+";
+}
+
 @font-face {
   font-family: "TSTAR W00 Heavy";
   src:         url("../assets/fonts/TSTAR_W00_Heavy.woff") format("woff"),
