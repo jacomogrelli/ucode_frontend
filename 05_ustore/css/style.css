@@ -3,9 +3,10 @@ body {
   letter-spacing: .05em;
 }
 
-body > not:first-child {
-  top: 102px;
+#mainContent {
+  margin-top: 102px;
 }
+
 
 /*====== Custom style for navigation ======*/
 .custom-dropdown a {
@@ -13,10 +14,10 @@ body > not:first-child {
 }
 
 .custom-navbar {
-  position:   fixed !important;
-  z-index:    100 !important;
+  /*position:   fixed !important;*/
+  /*z-index:    100 !important;*/
   width:      100vw;
-  background: rgba(255, 255, 255, 1) !important;
+  background: rgba(255, 255, 255, 0) !important;
 }
 
 .custom-search {
@@ -83,9 +84,10 @@ input[type="search"]:focus {
 
 /*====== Custom style for carousel ======*/
 
-/*#carouselExampleControls {*/
-/*  top: 102px !important;*/
-/*}*/
+#carouselExampleControls {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 .carousel-caption-first {
   bottom: 60% !important;
@@ -288,7 +290,9 @@ input[type=text]:focus {
   .personal-item { margin-left: 0; }
 
   .custom-navbar {background: rgba(255, 255, 255, 0.9) !important;}
+}
 
+@media screen and (max-width: 768px) {
   #carouselExampleControls { display: none !important; }
 }
 
