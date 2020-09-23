@@ -7,7 +7,6 @@ body {
   margin-top: 102px;
 }
 
-
 /*====== Custom style for navigation ======*/
 .custom-dropdown a {
   color: #cb323b !important;
@@ -17,7 +16,7 @@ body {
   /*position:   fixed !important;*/
   /*z-index:    100 !important;*/
   width:      100vw;
-  background: rgba(255, 255, 255, 0) !important;
+  background: rgba(255, 255, 255, .9) !important;
 }
 
 .custom-search {
@@ -86,7 +85,7 @@ input[type="search"]:focus {
 
 #carouselExampleControls {
   max-width: 1140px;
-  margin: 0 auto;
+  margin:    0 auto;
 }
 
 .carousel-caption-first {
@@ -155,7 +154,7 @@ input[type=text]:focus {
 }
 
 #dropdownMenuButton {
-  width:      80% !important;
+  /*width:      80% !important;*/
   background: #cb323b;
   outline:    none !important;
 }
@@ -167,9 +166,9 @@ input[type=text]:focus {
 
 #dropdownMenuButton ~ div > a { color: #cb323b; }
 
-#dropdownMenuButton ~ div { width: 80%; }
+/*#dropdownMenuButton ~ div { width: 80%; }*/
 
-.custom-set-max-price { width: 80% !important; }
+/*.custom-set-max-price { width: 80% !important; }*/
 
 .custom-set-max-price span {
   background: #cb323b !important;
@@ -190,7 +189,7 @@ input[type=text]:focus {
   border:        1px solid #cfd4da;
   border-radius: .25rem;
   padding:       .3rem;
-  width:         80%;
+  /*width:         80%;*/
   white-space:   nowrap;
 }
 
@@ -212,7 +211,7 @@ input[type=text]:focus {
 /*====== Catalog section ======*/
 
 .catalog {
-  margin-top: 1rem;
+  margin-top:    1rem;
   margin-bottom: 1rem;
 }
 
@@ -231,7 +230,7 @@ input[type=text]:focus {
   text-align:    center;
   transition:    all 0.5s ease 0s;
   border-radius: .25rem;
-  margin: 5px
+  margin:        5px
 }
 
 .product:hover {
@@ -265,6 +264,46 @@ input[type=text]:focus {
 }
 
 .fa-cart-plus {font-size: 1.5rem;}
+
+/*====== Style for footer ======*/
+
+footer {
+  padding: 1rem .5rem;
+}
+
+footer img { margin-left: 2rem; }
+
+footer span {
+  font-size:      .5rem;
+  letter-spacing: normal;
+}
+
+.copy-writing, .social-menu {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.social-menu * {
+  color:     #d51e08;
+  font-size: .7rem;
+}
+
+.social-icon {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 8rem;
+  padding-left: 0;
+}
+
+.social-link {
+  list-style: none;
+}
+
+.social-link i {
+  font-size: 1rem;
+}
 
 @font-face {
   font-family: "TSTAR W00 Heavy";
