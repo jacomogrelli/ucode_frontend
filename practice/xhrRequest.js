@@ -14,21 +14,22 @@ function sendRequest(method, url, body = null) {
     xhr.setRequestHeader(`Content-Type`, `application/json`)
     //if loading successful
     xhr.onload = () => {
-      //if loaded with successful code, but in
+      //if loaded with successful code, but with some mistakes
       if (xhr.status >= 400) {
         reject(xhr.response)
-      } esle {
+      } else {         // if loaded successful
         resolve(xhr.response)
       }
     }
-
+    //if loaded with error
     xhr.onerror = () => {
       console.log(xhr.response)
     }
-
+    //send request in JSON format
     xhr.send(JSON.stringify(body))
   })
 }
+
 //
 // sendRequest(`GET`, requestURL)
 //   .then(data => console.log(data))
