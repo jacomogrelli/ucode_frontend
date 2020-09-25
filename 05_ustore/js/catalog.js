@@ -1,25 +1,24 @@
 'use strict'
 
-let getCatalog = () => {
-  let result = fetch('../assets/catalog.json')
-    .then(response => response.json())
-    .then(data => result = data)
-    // {
-    //   (response.ok) ? response.json() : null
-    // })
-  console.log(result);
-  return Response.resolve(result)
-    .then(result => result)
-    ;
+
+async function getCatalog() {
+  // return await fetch('../assets/catalog/catalog.json')
+  //   .then(async response => {
+  //     if (response.ok) {
+  //       return await response.json();
+  //     }
+  //     return null;
+  //   })
+  let result = await fetch('../assets/catalog/catalog.json');
+
+  if (result.ok) {
+    let json = await result.json();
+    if (json)
+      return json;
+  }
 }
 
-// let getCatalog = fetch('../assets/catalog.json')
-//   .then(response => response.json())
-
-let catalog;
-
-getCatalog()
-  .then(data => catalog = data);
+let catalog = getCatalog();
 
 console.log(catalog);
 

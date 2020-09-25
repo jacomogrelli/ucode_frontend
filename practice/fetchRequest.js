@@ -38,21 +38,3 @@ const requestURL = `https://jsonplaceholder.typicode.com/photos`
 // })
 //   .then(data => console.log(data))
 //   .catch(err => console.error(err))
-
-async function getJson() {
-  let result;
-  return await fetch("https://jsonplaceholder.typicode.com/photos")
-    .then((resp) => resp.json())
-    .then((data) => data);
-
-  // return Promise.resolve(json).then(() => {
-  //   return result;
-  // });
-}
-
-let photo;
-
-(await getJson())
-  .resolve(resolve => resolve)
-  .then(value => photo = value);
-console.log(photo);
