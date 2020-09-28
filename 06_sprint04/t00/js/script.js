@@ -12,14 +12,12 @@ const magician = {
   }
 };
 
-let firstTime = true;
-
 function Creature(name, age, species, portrait) {
   this.name = name;
   this.age = age;
   this.species = species;
   this._portrait = portrait;
-  this.sayHello = () => console.log(`Hello, my name is ${this.name}`);
+  // this.sayHello = () => console.log(`Hello, my name is ${this.name}`);
 }
 
 function Human(name, age, species, portrait, job) {
@@ -37,39 +35,47 @@ function Dog(name, age, species, portrait, color) {
   this.color = color;
 }
 
+let sayHello = () => {
+  this.sayHello = () => console.log(`Hello, my name is ${this.name}`);
+}
+
 let applyProperties = (object, button) => {
-  // let properties = document.querySelector("#properties"),
-  //     head;
-  //
-  // if (firstTime) {
-  //   document.querySelector()
-  // }
-  // console.log(object);
+  let properties = document.querySelector("#properties"),
+    fullBlock = document.querySelector(".magician"),
+    head;
+  Object.setPrototypeOf(magician, object);
+  head = document.querySelector('#head').setAttribute("src", `${magician._getPortrait()}`)
+  properties.innerHTML = `<button id="do-magic" onclick="magician['do magic']()">DO MAGIC</button>`;
+  if (button && button.innerHTML != 'no prototype') {
+    properties.innerHTML += `<button id="say-hello" onclick="">SAY HELLO</button>`
+  }
 }
 
 let changeStatus = (button) => {
-  switch (button.innerHTML.charAt(0)) {
-    case "h":
+  if (button) {
+    if (button.innerHTML.charAt(0) == "h")
       applyProperties(human, button);
-      break;
-    case "v":
+    else if (button.innerHTML.charAt(0) == "v")
       applyProperties(vampire, button);
-      break;
-    case "d":
+    else if (button.innerHTML.charAt(0) == "d")
       applyProperties(dog, button);
-      break;
-    case "n":
-    default:
-      applyProperties(undefined, button);
-      break;
-  }
+    else if (button.innerHTML.charAt(0) == "n")
+      applyProperties(Object.prototype, button);
+  } else
+    applyProperties(Object.prototype, button);
 }
+
+Human.prototype = Object.create(Creature.prototype)
+Vampire.prototype = Object.create(Creature.prototype)
+Dog.prototype = Object.create(Creature.prototype)
+
+Human.prototype.constructor = Human
+Vampire.prototype.constructor = Vampire
+Dog.prototype.constructor = Dog
 
 
 let human = new Human("Linda", 22, "human", './assets/images/human.png', "doctor")
 let vampire = new Vampire("Vlad III", 915, "vampire", './assets/images/vampire.png', "unemployment", "count")
 let dog = new Dog("Fluffy", 3, "dog", './assets/images/dog.png', "brown")
 
-
-// changeStatus()
-
+changeStatus();
