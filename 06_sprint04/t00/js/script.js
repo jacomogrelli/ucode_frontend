@@ -4,6 +4,13 @@
 /*                                                                            */
 /*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
 /*                        <t.me/losini>                                       */
+/*   Created: 2020/09/27                                                      */
+/*   Finished: 2020/09/29                                                     */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: JavaScript Object Prototypes inheritance                         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +22,7 @@
  * prototype
  */
 const magician = {
-  /* Nahuyato nado */
+  /* Nahuya-to nado */
   _hat: './assets/images/hat.png',
   /* Function check if there is portrait link in object or return link to basic */
   _getPortrait() {
