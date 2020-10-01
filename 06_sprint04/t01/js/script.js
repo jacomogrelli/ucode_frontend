@@ -18,24 +18,23 @@ import {movies, favorites} from "./movies.js";
 
 let renderFilmInfo = (set) => {
   let activeFilm = document.querySelector(".li-active"),
-    poster = document.querySelector(".poster"),
-    activeCategory = document.querySelector("categoty-active")
-  for (let movie of set) {
+    div = document.querySelector('.film-info'),
+    actors = document.createElement("div")
+
+  actors.setAttribute('class', 'actors')
+  for (let movie of set)
     if (activeFilm.innerHTML === movie.title) {
-      let div = document.querySelector(".film-info")
-      div.innerHTML = `<div class="film-name"><p>${movie.title}</p>` +
-        `<div id="addToFav">${movie.favorites}</div>` +
-        `<div class="date"><p>${movie.date}</p></div><div class="actors">`
-        for (let i of movie.actors)
-          div.innerHTML += `<p>${i}<\p>`
-        div.innerHTML += `</div><div class="description"><p>` +
-          `${movie.description}</p></div></div>`
+      div.innerHTML = `<div class="film-name"><p>${movie.title}</p><div id="addToFav">${movie.favorites}</div></div>`
+      div.innerHTML += `<div class="date"><p>${movie.date}</p></div>`
+      for (let i of movie.actors) {
+        actors.insertAdjacentHTML("beforeend", `<p>${i}</p>`)
+      }
+      div.append(actors)
+      div.insertAdjacentHTML("beforeend", `</div><div class="description"><p>${movie.info}</p></div></div>`)
+      div.insertAdjacentHTML('afterend', `<div class="poster"><img src="${movie.poster}" alt="${movie.title}"></div>`)
       break;
     }
-  poster.innerHTML = `<img src="${movie.poster} alt="${movie.title}">`
-  }
 }
-
 
 let renderFilmList = (set) => {
   let ul = document.querySelector("ul"),
@@ -49,9 +48,23 @@ let renderFilmList = (set) => {
     li.innerHTML = movie.title
     ul.append(li)
   }
+  renderFilmInfo(set);
 }
 
+let renderCollection = (target) => {
+  document.querySelector(".category-active").classList.remove('category-active')
+  target.classList.add("category-active")
+  if (target.innerHTML === "All")
+    renderFilmList(movies)
+  else
+    renderFilmList(favorites)
+}
 
+let intMain = () => {
+  let btnsCollect = document.querySelector("nav");
 
-renderFilmList(movies)
-renderFilmInfo(movies)
+  btnsCollect.onclick = (event) => renderCollection(event.target);
+  renderFilmList(movies)
+}
+
+intMain();

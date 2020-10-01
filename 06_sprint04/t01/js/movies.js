@@ -28,19 +28,19 @@ class Movie {
 
   addToFavorite() {
     favorites.add(this);
-    this.favoriets = `<i class="fas fa-heart red-heart"></i>`;
+    this.favorites = `<i class="fas fa-heart red-heart"></i>`;
   }
 
   removeFromFavorites() {
     favorites.delete(this);
-    this.favoriets = `<i class="far fa-heart"></i>`;
+    this.favorites = `<i class="far fa-heart"></i>`;
   }
 }
 
 let shawshankRedemption = new Movie({
   title: "The Shawshank",
-  poster: "https://en.wikipedia.org/wiki/The_Shawshank_Redemption#/media/File:ShawshankRedemptionMoviePoster.jpg",
-  date: "September 10, 1994",
+  poster: "http://www.impawards.com/1994/posters/shawshank_redemption_ver1.jpg",
+  date: "Sep 10, 1994",
   info: "The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. It tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis \"Red\" Redding (Morgan Freeman), and becomes instrumental in a money-laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows, and James Whitmore appear in supporting roles.",
   actors: ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"],
   favorites: `<i class=\"far fa-heart\">`

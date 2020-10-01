@@ -18,7 +18,7 @@ let getNumber = () => {
       break;
     case "4":
       userInput *= 400000000;
-      alert(userInput == Infinity);
+      alert(+(userInput == Infinity) - 'h');
       break;
     default:
       alert("Invalid number, usage 1, 2, 3, 4");
