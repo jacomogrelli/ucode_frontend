@@ -5,7 +5,7 @@
 /*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
 /*                        <t.me/losini>                                       */
 /*   Created: 2020/09/27                                                      */
-/*   Finished: unfinished                                                     */
+/*   Finished: 2020/10/02 10:45 (24H)                                      */
 /*                                                                            */
 /*   ucode IT academy <ucode.world>                                           */
 /*   Je sues 42, nous sommes 42                                               */
@@ -25,12 +25,12 @@ class Movie {
     this.actors = options.actors;
     this.favorites = options.favorites;
   }
-
+  /* Function add object to Set of favorites and change hurt to Favorite hurt*/
   addToFavorite() {
     favorites.add(this);
     this.favorites = `<i class="fas fa-heart red-heart"></i>`;
   }
-
+  /* Reverse to addToFavorite function */
   removeFromFavorites() {
     favorites.delete(this);
     this.favorites = `<i class="far fa-heart"></i>`;
@@ -63,12 +63,11 @@ let darkKnight = new Movie({
   favorites: `<i class=\"far fa-heart\">`
 })
 
+/* Export is a tag to export this variable to other js-files */
 export let favorites = new Set();
 export let movies = new Set();
 
+/* Adding objects to Set */
 movies.add(shawshankRedemption)
 movies.add(godfather)
 movies.add(darkKnight)
-
-
-console.log(movies)
