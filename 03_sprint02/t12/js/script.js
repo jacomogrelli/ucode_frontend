@@ -13,3 +13,4 @@ let triangle = (count) => {
 }
 
 alert(triangle(6));
+

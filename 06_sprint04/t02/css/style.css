@@ -25,12 +25,12 @@ body {
 .wrapper {
   display:               grid;
   width:                 420px;
-  height:                600px;
+  height:                700px;
   position:              relative;
   margin:                0 auto;
   grid-template-columns: 400px;
   grid-gap:              20px;
-  grid-template-rows: 600px;
+  grid-template-rows: 700px;
 }
 
 .magician {
