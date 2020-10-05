@@ -1,0 +1,45 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   Drag'n'Drop Stones. sprint04. t03                                        */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: 2020/10/05 11:25 (24H)                                          */
+/*   Finished: 2020/10/05 18:43                                               */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: JavaScript Events                                                */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  border: 2px solid cyan;
+  display: inline-block;
+  transform: rotate(45deg);
+  margin: 20px;
+  transition: .1s;
+}
+
+.active { border: none; }
+
+#red { background: darkred; }
+
+#green { background: darkgreen; }
+
+#blue { background: darkblue; }
+
+#yellow { background: yellow; }
+
+#magenta { background: magenta; }
+
+#grey { background: grey; }
+
