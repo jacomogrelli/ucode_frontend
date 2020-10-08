@@ -4,7 +4,7 @@
 
 CURRENTDATE=`date +"%Y/%m/%d %H:%M"`
 
-mkdir -p t$1 t$1/assets t$1/css t$1/script
+mkdir -p t$1 t$1/assets t$1/css t$1/js
 touch t$1/css/style.css t$1/js/script.js t$1/index.html
 echo "<!-- ----------------------------------------------------------------------- -->
 <!--                                                                         -->

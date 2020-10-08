@@ -1,18 +1,18 @@
-/* ----------------------------------------------------------------------- */
-/*                                                                         */
-/*   Menu. sprint04. t05                           */
-/*                                                                         */
-/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
-/*                        <t.me/losini>                                    */
-/*   Created: 2020/10/08 12:14 (24H)                                       */
-/*   Finished: UNFINISHED                                                  */
-/*                                                                         */
-/*   ucode IT academy <ucode.world>                                        */
-/*   Je sues 42, nous sommes 42                                            */
-/*                                                                         */
-/*   Topics: Map collections                          */
-/*                                                                         */
-/* ----------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   Menu. sprint04. t05                                                      */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: 2020/10/08 12:14 (24H)                                          */
+/*   Finished: 20/10/08 16:40 (24H)                                           */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: Map collections                                                  */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
 'use strict'
 
 /*====== Function ======*/

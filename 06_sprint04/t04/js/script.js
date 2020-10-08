@@ -5,7 +5,7 @@
 /*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
 /*                        <t.me/losini>                                       */
 /*   Created: 2020/10/07 09:47 (24H)                                          */
-/*   Finished: UNFINISHED                                                     */
+/*   Finished: 2020/10/07 15:15 (24H)                                         */
 /*                                                                            */
 /*   ucode IT academy <ucode.world>                                           */
 /*   Je sues 42, nous sommes 42                                               */
