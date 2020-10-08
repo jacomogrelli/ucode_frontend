@@ -1,0 +1,39 @@
+/* ----------------------------------------------------------------------- */
+/*                                                                         */
+/*   Menu. sprint04. t05                                                   */
+/*                                                                         */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
+/*                        <t.me/losini>                                    */
+/*   Created: 2020/10/08 12:14 (24H)                                       */
+/*   Finished: UNFINISHED                                                  */
+/*                                                                         */
+/*   ucode IT academy <ucode.world>                                        */
+/*   Je sues 42, nous sommes 42                                            */
+/*                                                                         */
+/*   Topics: Map collections                                               */
+/*                                                                         */
+/* ----------------------------------------------------------------------- */
+
+.menu {
+  font-family: 'Lobster', cursive;
+  margin: 0 auto;
+  width: 40em;
+  text-align: center;
+  background: transparent;
+  position: relative;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+  z-index: -1;
+  position: absolute;
+  left: 3%
+}
+
+.section-header { font-size: 1.4em; }
+
+.position {
+  display: flex;
+  justify-content: space-around;
+}
