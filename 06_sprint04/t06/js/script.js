@@ -14,3 +14,36 @@
 /*                                                                         */
 /* ----------------------------------------------------------------------- */
 'use strict'
+
+/*====== Function ======*/
+/* get element by selector, returns the element
+ * @id - css-style string for querySelector */
+let get = (id) => document.querySelector(id);
+
+document.querySelector('.msgBox').scrollTop = 9999999;
+
+function* replies() {
+  yield 'Hello, I am J.A.R.V.I.S.';
+  yield 'I believe I\'ve already said it, but, sure, hello again!';
+  yield 'You are malfunctioning';
+  yield 'I believe your intentions to be hostile.';
+  while (true)
+    yield 'I will not respond to that.';
+}
+
+let addMsg = (event, msg) => {
+
+}
+
+let addListeners = () => {
+  let key = get('.send')
+
+  key.addEventListener('click', () => {
+    console.log('asdf')})
+  document.addEventListener('keypress', (key) => {
+    if (key.key === 'Enter')
+    console.log('rabotaet')
+  })
+}
+
+addListeners()
