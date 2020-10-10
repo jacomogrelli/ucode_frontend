@@ -13,7 +13,7 @@ echo "<!-- ---------------------------------------------------------------------
 <!--   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             -->
 <!--                        <t.me/losini>                                    -->
 <!--   Created: $CURRENTDATE (24H)                                       -->
-<!--   Finished: UNFINISHED                                                  -->
+<!--   Finished: UNFINISHED                                      -->
 <!--                                                                         -->
 <!--   ucode IT academy <ucode.world>                                        -->
 <!--   Je sues 42, nous sommes 42                                            -->
@@ -49,7 +49,7 @@ echo "/* -----------------------------------------------------------------------
 /*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
 /*                        <t.me/losini>                                    */
 /*   Created: $CURRENTDATE (24H)                                       */
-/*   Finished: UNFINISHED                                                  */
+/*   Finished: UNFINISHED                                      */
 /*                                                                         */
 /*   ucode IT academy <ucode.world>                                        */
 /*   Je sues 42, nous sommes 42                                            */
@@ -65,7 +65,7 @@ echo "/* -----------------------------------------------------------------------
 /*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
 /*                        <t.me/losini>                                    */
 /*   Created: $CURRENTDATE (24H)                                       */
-/*   Finished: UNFINISHED                                                  */
+/*   Finished: UNFINISHED                                      */
 /*                                                                         */
 /*   ucode IT academy <ucode.world>                                        */
 /*   Je sues 42, nous sommes 42                                            */
