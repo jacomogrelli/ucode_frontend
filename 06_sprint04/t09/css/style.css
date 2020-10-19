@@ -1,0 +1,56 @@
+/* ----------------------------------------------------------------------- */
+/*                                                                         */
+/*   Weather forecast. sprint04. t09                                       */
+/*                                                                         */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
+/*                        <t.me/losini>                                    */
+/*   Created: 2020/10/15 11:09 (24H)                                       */
+/*   Finished: UNFINISHED                                      */
+/*                                                                         */
+/*   ucode IT academy <ucode.world>                                        */
+/*   Je sues 42, nous sommes 42                                            */
+/*                                                                         */
+/*   Topics: API Introduction                                              */
+/*                                                                         */
+/* ----------------------------------------------------------------------- */
+
+body * {
+  box-sizing:  border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.forecast {
+  display:         flex;
+  width:           80%;
+  max-width:       60em;
+  margin:          0 auto;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+  background:      linear-gradient(90deg, #84bfb2, #45526d);
+  border-radius:   .5em;
+}
+
+.day {
+  display:        flex;
+  flex-direction: column;
+  background:     #a8beba;
+  height:         80%;
+  margin:         .5em;
+  text-align:     center;
+  border-radius:  .5em;
+  padding:        .5em;
+  color:          #48484a;
+}
+
+.dayOfWeek {
+  text-shadow:    grey;
+  text-transform: uppercase;
+  font-weight:    700;
+  font-size:      1.2em;
+}
+
+.date {font-size: 0.9em;}
+
+img { width: 5em; }
+
+.temperature { font-weight: 700;}
