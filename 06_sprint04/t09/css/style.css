@@ -1,18 +1,18 @@
-/* ----------------------------------------------------------------------- */
-/*                                                                         */
-/*   Weather forecast. sprint04. t09                                       */
-/*                                                                         */
-/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
-/*                        <t.me/losini>                                    */
-/*   Created: 2020/10/15 11:09 (24H)                                       */
-/*   Finished: UNFINISHED                                      */
-/*                                                                         */
-/*   ucode IT academy <ucode.world>                                        */
-/*   Je sues 42, nous sommes 42                                            */
-/*                                                                         */
-/*   Topics: API Introduction                                              */
-/*                                                                         */
-/* ----------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   Weather forecast. sprint04. t09                                          */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: 2020/10/15 11:09 (24H)                                          */
+/*   Finished: 2020/10/20 10:03 (24H)                                         */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: API Introduction                                                 */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
 
 body * {
   box-sizing:  border-box;
@@ -28,6 +28,15 @@ body * {
   justify-content: space-around;
   background:      linear-gradient(90deg, #84bfb2, #45526d);
   border-radius:   .5em;
+}
+
+.city {
+  font-size:   1.3em;
+  text-align:  center;
+  color:       #48484a;
+  font-weight: 900;
+  width: 100%;
+  margin: 1em;
 }
 
 .day {
