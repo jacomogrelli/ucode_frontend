@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   Super-stats. sprint04. t10                                               */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: 2020/10/20 10:44 (24H)                                          */
+/*   Finished: UNFINISHED                                         */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: API Introduction                                                 */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+
+body * { box-sizing: border-box; }
+
+#searchResults { display: none; }
+
+#searchResultsBtns > * {
+  display: block;
+}

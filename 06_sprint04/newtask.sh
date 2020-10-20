@@ -42,35 +42,35 @@ java script, javascript js, c, css, html5, css3\">
 
 </html>" >> t$1/index.html
 
-echo "/* ----------------------------------------------------------------------- */
-/*                                                                         */
-/*   $2. sprint04. t$1                           */
-/*                                                                         */
-/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
-/*                        <t.me/losini>                                    */
-/*   Created: $CURRENTDATE (24H)                                       */
-/*   Finished: UNFINISHED                                      */
-/*                                                                         */
-/*   ucode IT academy <ucode.world>                                        */
-/*   Je sues 42, nous sommes 42                                            */
-/*                                                                         */
-/*   Topics: $3                          */
-/*                                                                         */
-/* ----------------------------------------------------------------------- */" >> t$1/css/style.css
+echo "/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   $2. sprint04. t$1                              */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: $CURRENTDATE (24H)                                          */
+/*   Finished: UNFINISHED                                         */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: $3                             */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */" >> t$1/css/style.css
 
-echo "/* ----------------------------------------------------------------------- */
-/*                                                                         */
-/*   $2. sprint04. t$1                           */
-/*                                                                         */
-/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             */
-/*                        <t.me/losini>                                    */
-/*   Created: $CURRENTDATE (24H)                                       */
-/*   Finished: UNFINISHED                                      */
-/*                                                                         */
-/*   ucode IT academy <ucode.world>                                        */
-/*   Je sues 42, nous sommes 42                                            */
-/*                                                                         */
-/*   Topics: $3                          */
-/*                                                                         */
-/* ----------------------------------------------------------------------- */
+echo "/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*   $2. sprint04. t$1                              */
+/*                                                                            */
+/*   By: Oleksiy Nechaiev <nechaeff@gmail.com>                                */
+/*                        <t.me/losini>                                       */
+/*   Created: $CURRENTDATE (24H)                                          */
+/*   Finished: UNFINISHED                                         */
+/*                                                                            */
+/*   ucode IT academy <ucode.world>                                           */
+/*   Je sues 42, nous sommes 42                                               */
+/*                                                                            */
+/*   Topics: $3                             */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
 'use strict'" >> t$1/js/script.js

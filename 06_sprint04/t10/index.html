@@ -1,0 +1,52 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                                                                         -->
+<!--   Super-stats. sprint04. t10                                            -->
+<!--                                                                         -->
+<!--   By: Oleksiy Nechaiev <nechaeff@gmail.com>                             -->
+<!--                        <t.me/losini>                                    -->
+<!--   Created: 2020/10/20 10:44 (24H)                                       -->
+<!--   Finished: UNFINISHED                                      -->
+<!--                                                                         -->
+<!--   ucode IT academy <ucode.world>                                        -->
+<!--   Je sues 42, nous sommes 42                                            -->
+<!--                                                                         -->
+<!--   Topics: API Introduction                                              -->
+<!--                                                                         -->
+<!-- ----------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <title>Super-stats</title>
+  <meta charset="utf-8">
+  <meta name="description" content="t10. Super-stats">
+  <meta name="author" content="Oleksiy Nechayev">
+  <meta name="keywords" content="front-end, frontend, html,
+java script, javascript js, c, css, html5, css3">
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+<h1>Super-stats</h1>
+<div class="container">
+  <p id="description">Compare stats of different superheroes<br> Find superheroes to compare using "Search" button or
+    click "Random" to select random superhero.<br>Once you have selected all the superheroes you want to compare click
+    "Compare" </p>
+  <div>
+    <input type="text" id="requestValue" autofocus placeholder="Enter search request">
+    <input type="button" value="Search" onclick="makeSearchRequest()">
+    <input type="button" value="Random" onclick="makeRandomRequest()">
+    <input type="button" value="Compare 0" id="compare">
+  </div>
+  <div id="searchResults">
+    <h3>Search result</h3>
+    <div id="searchResultsBtns">
+
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
