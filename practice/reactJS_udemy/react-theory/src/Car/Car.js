@@ -11,4 +11,10 @@ import React from 'react'
 
 // export default Car
 
-export default () => <h1>This is car component</h1>
+export default (props) => (
+  <div>
+    <h3>Car name: {props.name}</h3>
+    <p>Year: {props.year}</p>
+    <button onClick={props.onChangeTitle}>Click</button>
+  </div>
+)

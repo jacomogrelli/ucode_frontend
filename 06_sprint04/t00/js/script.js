@@ -133,7 +133,7 @@ let changeStatus = (button) => {
 
 /* Huy ego znaet, spizdil, shob kak v pdf bylo */
 Human.prototype = Object.create(Creature.prototype)
-Vampire.prototype = Object.create(Creature.prototype)
+Vampire.prototype = Object.create(Human.prototype)
 Dog.prototype = Object.create(Creature.prototype)
 
 /* Apply constructor of current prototype to it owns */

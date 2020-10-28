@@ -1,29 +1,63 @@
-import React, { Component} from 'react'
+import React, {Component} from 'react'
 import './App.css';
 import Car from './Car/Car.js'
 
 class App extends Component {
-  render () {
+
+  state = {
+    cars: [
+      {name: 'Ford', year: 2018},
+      {name: 'Audi', year: 2016},
+      {name: 'Mazda', year: 2015}
+    ],
+    pageTitle: 'React components',
+    showCars: false
+  }
+
+  changeTitleHandler = (newTitle) => {
+    this.setState({
+      pageTitle: newTitle,
+    })
+  }
+
+  // handleInput = (event) => {
+  //   this.setState({
+  //     pageTitle: event.target.value,
+  //   })
+  // }
+  toggleCarsHandler = () => {
+    this.setState({
+      showCars: !this.state.showCars
+    })
+  }
+
+  render() {
     const divStyle = {
       textAlign: 'center',
     }
 
+    let cars = null
+    if (this.state.showCars) {
+      cars = this.state.cars.map((car, index) => {
+        return (
+          <Car key={index} name={car.name} year={car.year}
+               onChangeTitle={this.changeTitleHandler.bind(this, car.name)}/>
+        )
+      })
+    }
+
     return (
       <div style={divStyle}>
-        <h1>Hello</h1>
-        <Car />
-      </div>
+        <h1>{this.state.pageTitle}</h1>
 
+        {/*<input type="text" onChange={this.handleInput}/>*/}
+
+        <button onClick={this.toggleCarsHandler}>Toggle Cars
+        </button>
+
+        { cars }
+      </div>
     );
-//     return React.createElement(
-//       'div',
-//       {className: 'App'},
-// React.createElement (
-//   'h1',
-//   null,
-//   'Hello world!'
-// )
-//     )
   }
 }
 
