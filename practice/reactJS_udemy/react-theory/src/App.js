@@ -20,15 +20,17 @@ class App extends Component {
     })
   }
 
-  // handleInput = (event) => {
-  //   this.setState({
-  //     pageTitle: event.target.value,
-  //   })
-  // }
   toggleCarsHandler = () => {
     this.setState({
       showCars: !this.state.showCars
     })
+  }
+
+  onChangeName = (name, index) => {
+    const car = this.state.cars[index]
+    car.name = name;
+    const cars = [...this.state.cars]
+    this.setState({cars})
   }
 
   render() {
@@ -41,7 +43,7 @@ class App extends Component {
       cars = this.state.cars.map((car, index) => {
         return (
           <Car key={index} name={car.name} year={car.year}
-               onChangeTitle={this.changeTitleHandler.bind(this, car.name)}/>
+               onChangeName={(event) => this.onChangeName(event.target.value, index)}/>
         )
       })
     }
