@@ -26,6 +26,13 @@ class App extends Component {
     })
   }
 
+  deleteHandler = (index) => {
+    const cars = [...this.state.cars]
+
+    cars.splice(index, 1)
+    this.setState({cars})
+  }
+
   onChangeName = (name, index) => {
     const car = this.state.cars[index]
     car.name = name;
@@ -42,7 +49,10 @@ class App extends Component {
     if (this.state.showCars) {
       cars = this.state.cars.map((car, index) => {
         return (
-          <Car key={index} name={car.name} year={car.year}
+          <Car key={index}
+               name={car.name}
+               year={car.year}
+               onDelete={this.deleteHandler.bind(this, index)}
                onChangeName={(event) => this.onChangeName(event.target.value, index)}/>
         )
       })
@@ -51,13 +61,10 @@ class App extends Component {
     return (
       <div style={divStyle}>
         <h1>{this.state.pageTitle}</h1>
-
-        {/*<input type="text" onChange={this.handleInput}/>*/}
-
         <button onClick={this.toggleCarsHandler}>Toggle Cars
         </button>
 
-        { cars }
+        {cars}
       </div>
     );
   }
