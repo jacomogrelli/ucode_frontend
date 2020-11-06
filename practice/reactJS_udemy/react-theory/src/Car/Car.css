@@ -1,6 +1,29 @@
 .Car {
-  border:  1px solid black;
   display: block;
   width:   fit-content;
-  margin:  5px auto;
+  margin:  15px auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  boxShadow: 0 4px 5px 0 rgba(0, 0, 0, .14)
+}
+
+.input {
+
+}
+
+.input:active, .input:focus {
+  outline: none;
+}
+
+.input.green {
+  border: 1px solid green;
+}
+
+.input.red {
+  border: 1px solid red;
+}
+
+.input.bolt {
+  border: 2px solid green;
+  font-weight: 900;
 }
