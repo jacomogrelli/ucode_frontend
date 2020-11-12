@@ -6,11 +6,14 @@ export default props => {
   return (
     <div className={classes.ActiveQuiz}>
       <p className={classes.Question}>
-        <span><strong>1. </strong> I'm a quiz question</span>
-        <small>4 of 12</small>
+        <span><strong>{ props.activeQuestion + 1 }. </strong> { props.quiz.question }</span>
+        <small>{ props.activeQuestion + 1 } of { props.sizeOfQuiz }</small>
       </p>
       <AnswersList
-        answers={props.answers}
+        activeQuestion={props.activeQuestion}
+        answers={props.quiz.answers}
+        onAnswer={props.onAnswer}
+        questionState={props.questionState}
       />
     </div>
   )

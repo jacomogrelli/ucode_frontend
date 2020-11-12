@@ -4,13 +4,13 @@ h2 {
 }
 
 .subtopic {
-  display: grid;
+  display:               grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: calc(2vw);
+  grid-gap:              calc(2vw);
 }
 
 .elements {
-  border: 1px solid black;
+  border:  1px solid black;
   padding: 5px;
 }
 
