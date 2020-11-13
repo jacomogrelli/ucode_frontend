@@ -5,10 +5,11 @@ const AnswerItem = props => {
   let cls = [classes.AnswerItem]
 
   if (props.questionState)
-    cls.push(props.questionState)
+    cls.push(classes[props.questionState])
 
   return (
-    <li className={cls.join(' ')} onClick={() => props.onAnswer(props.answer.answerId)}>
+    <li className={cls.join(' ')}
+        onClick={() => props.onAnswer(props.answer.answerId)}>
       {props.answer.text}
     </li>
   )

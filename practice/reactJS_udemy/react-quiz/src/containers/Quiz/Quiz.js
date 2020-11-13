@@ -5,7 +5,7 @@ import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 class Quiz extends React.Component {
   state = {
     activeQuestion: 0,
-    questionState: null,
+    questionState: null, //{[id]: success//error}
     quiz: [
       {
         question: 'This is the first question',
@@ -28,31 +28,47 @@ class Quiz extends React.Component {
           {text: 'Third variant', answerId: 3},
           {text: 'Fourth variant', answerId: 4},
         ]
+      },
+      {
+        question: 'This is the third question',
+        questionId: 3,
+        rightAnswer: 3,
+        answers: [
+          {text: 'First variant', answerId: 1},
+          {text: 'Second variant', answerId: 2},
+          {text: 'Third variant', answerId: 3},
+          {text: 'Fourth variant', answerId: 4},
+        ]
       }
     ]
   }
 
   onAnswer = (answerId) => {
     let questionState = this.state.questionState
+
+    if (questionState &&
+      questionState[Object.keys(questionState)] === 'success')
+      return;
+
     if (this.state.quiz[this.state.activeQuestion].rightAnswer === answerId) {
-      questionState = 'success'
+      questionState = {[answerId]: 'success'}
       this.setState({questionState: questionState})
       if (this.state.activeQuestion + 1 === this.state.quiz.length) {
         console.log('finish')
       } else {
         const timeout = window.setTimeout(() => {
           const tmp = this.state.activeQuestion + 1
-          this.setState({ activeQuestion: tmp })
+          this.setState({activeQuestion: tmp})
           window.clearTimeout(timeout)
+          questionState = null;
+          this.setState({questionState: questionState})
         }, 1000)
       }
     } else {
-      questionState = 'error'
+      questionState = {[answerId]: 'error'}
       this.setState({questionState: questionState})
-
       console.log('incorrect answer')
     }
-    console.log(this.state.activeQuestion, this.state.quiz.length)
   }
 
   render() {
