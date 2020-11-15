@@ -1,4 +1,4 @@
-.ActiveQuiz {
+.Finished {
   border:        2px solid #fff;
   box-sizing:    border-box;
   border-radius: 5px;
@@ -7,7 +7,9 @@
   color:         #fff;
 }
 
-.Question {
-  display:         flex;
-  justify-content: space-between;
+.Finished h1 {
+  color:       #fff;
+  margin-left: .7em;
 }
+
+.WriteAnswers { margin-left: 1.5em; }

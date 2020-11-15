@@ -1,10 +1,13 @@
 import React from 'react'
 import classes from './Quiz.module.css'
 import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
+import Finished from "../../components/Finished/Finished";
 
 class Quiz extends React.Component {
   state = {
     activeQuestion: 0,
+    isFinished: false,
+    numberOfRightAnswers: 0,
     questionState: null, //{[id]: success//error}
     quiz: [
       {
@@ -45,29 +48,35 @@ class Quiz extends React.Component {
 
   onAnswer = (answerId) => {
     let questionState = this.state.questionState
+    let answerResult = this.state.numberOfRightAnswers
 
-    if (questionState &&
-      questionState[Object.keys(questionState)] === 'success')
+    if (questionState != null)
       return;
 
     if (this.state.quiz[this.state.activeQuestion].rightAnswer === answerId) {
       questionState = {[answerId]: 'success'}
-      this.setState({questionState: questionState})
-      if (this.state.activeQuestion + 1 === this.state.quiz.length) {
-        console.log('finish')
-      } else {
-        const timeout = window.setTimeout(() => {
-          const tmp = this.state.activeQuestion + 1
-          this.setState({activeQuestion: tmp})
-          window.clearTimeout(timeout)
-          questionState = null;
-          this.setState({questionState: questionState})
-        }, 1000)
-      }
+      answerResult += 1
+      this.setState({
+        questionState: questionState,
+        numberOfRightAnswers: answerResult
+      })
     } else {
       questionState = {[answerId]: 'error'}
       this.setState({questionState: questionState})
-      console.log('incorrect answer')
+    }
+    if (this.state.activeQuestion + 1 === this.state.quiz.length) {
+      const timeout = window.setTimeout(() => {
+        this.setState( {isFinished: true})
+        window.clearTimeout(timeout)
+      }, 1000)
+    } else {
+      const timeout = window.setTimeout(() => {
+        const tmp = this.state.activeQuestion + 1
+        this.setState({activeQuestion: tmp})
+        window.clearTimeout(timeout)
+        questionState = null;
+        this.setState({questionState: questionState})
+      }, 1000)
     }
   }
 
@@ -76,11 +85,15 @@ class Quiz extends React.Component {
       <div className={classes.Quiz}>
         <div>
           <h1>Quiz</h1>
-          <ActiveQuiz activeQuestion={this.state.activeQuestion}
-                      quiz={this.state.quiz[this.state.activeQuestion]}
-                      sizeOfQuiz={this.state.quiz.length}
-                      questionState={this.state.questionState}
-                      onAnswer={this.onAnswer}/>
+          {this.state.isFinished ?
+            <Finished rightAnswers={this.state.numberOfRightAnswers}
+                      sizeOfQuiz={this.state.quiz.length} /> :
+            <ActiveQuiz activeQuestion={this.state.activeQuestion}
+                        quiz={this.state.quiz[this.state.activeQuestion]}
+                        sizeOfQuiz={this.state.quiz.length}
+                        questionState={this.state.questionState}
+                        onAnswer={this.onAnswer} />
+          }
         </div>
       </div>
     )
